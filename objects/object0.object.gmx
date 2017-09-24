@@ -28,7 +28,7 @@
             <string>m_speed = 6;
 m_airSpd = 3;
 m_jumpForce = 18;
-m_jumpDir = 0;
+xSign = 0;
 m_gForce = 0.75;
 m_hangingUpSpd = 4;
 m_canMoveInAir = false;
@@ -43,8 +43,8 @@ state = st_idle; // Variavel que ira gerenciar o estado atual do personagem
 inWater = false;
 hangingUp = false;
 
-yspeed = 0;
-xspeed = 0;
+ySpeed = 0;
+xSpeed = 0;
 grav = 0;
 </string>
           </argument>
@@ -75,7 +75,7 @@ wantMove = abs(dir); // Variável booleana, que diz se o jogador quer mover o pe
 
 script_execute(state); // Executa o script correspondente ao estado atual do personagem;
 
-scr_cleanMove(); // Executa o script de movimento limpo - By: Willy (GMBR);
+cleanMove(); // Executa o script de movimento limpo - By: Willy (GMBR);
 
 if (keyboard_check_pressed(key().damage))
     takeDamage(5);
@@ -102,7 +102,7 @@ if (keyboard_check_pressed(key().damage))
             <string>/// Cheats
 if (keyboard_check_pressed(key().cheat))
 {
-    cheat = get_string("Enter a command:", "");
+    cheat = get_string("Enter a command: (mair | xspd | jump | hangspd | fric | waterDivisor | grav", "");
 
     switch(cheat)
     {
@@ -132,6 +132,22 @@ if (keyboard_check_pressed(key().cheat))
 </string>
           </argument>
         </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="27">
+      <action>
+        <libid>1</libid>
+        <id>332</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_end_game</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
   </events>

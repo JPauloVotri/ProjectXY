@@ -7,24 +7,21 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\sprite0</sprite>
-    <sprite>sprites\spr_block</sprite>
-    <sprite>sprites\spr_halfBlock_r</sprite>
-    <sprite>sprites\spr_halfBlock_l</sprite>
-    <sprite>sprites\spr_slope_l</sprite>
-    <sprite>sprites\spr_slope_r</sprite>
-    <sprite>sprites\spr_grab_l</sprite>
-    <sprite>sprites\spr_grab_r</sprite>
-    <sprite>sprites\spr_ice</sprite>
-    <sprite>sprites\spr_water</sprite>
+    <sprite>sprites\sBlock</sprite>
+    <sprite>sprites\sHalfBlock</sprite>
+    <sprite>sprites\sSlope</sprite>
+    <sprite>sprites\sGrab</sprite>
+    <sprite>sprites\sIce</sprite>
+    <sprite>sprites\sWater</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tile_test</background>
+    <background>background\bRoomTest</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\key.gml</script>
-    <script>scripts\scr_speed.gml</script>
-    <script>scripts\scr_cleanMove.gml</script>
+    <script>scripts\cleanMove.gml</script>
     <script>scripts\scr_0.gml</script>
     <scripts name="States">
       <script>scripts\st_idle.gml</script>
@@ -33,18 +30,23 @@
       <script>scripts\st_hanging.gml</script>
     </scripts>
     <scripts name="PlayerScripts">
+      <scripts name="Getters">
+        <script>scripts\getSpeed.gml</script>
+        <script>scripts\getJumpForce.gml</script>
+        <script>scripts\getGravityForce.gml</script>
+        <script>scripts\getHangingUpSpeed.gml</script>
+      </scripts>
       <script>scripts\takeDamage.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\object0</object>
-    <object>objects\obj_block</object>
-    <object>objects\obj_slope</object>
-    <object>objects\obj_grab</object>
-    <object>objects\obj_halfBlock</object>
-    <object>objects\obj_slope_r</object>
-    <object>objects\obj_ice</object>
-    <object>objects\obj_water</object>
+    <object>objects\oBlock</object>
+    <object>objects\oSlope</object>
+    <object>objects\oGrab</object>
+    <object>objects\oHalfBlock</object>
+    <object>objects\oIce</object>
+    <object>objects\oWater</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room3</room>

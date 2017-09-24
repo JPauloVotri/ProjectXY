@@ -1,3 +1,3 @@
 state = st_idle;
-yspeed = -5;
-xspeed = -5;
+ySpeed = -5;
+xSpeed = -5;
