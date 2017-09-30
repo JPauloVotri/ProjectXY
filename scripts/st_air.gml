@@ -8,7 +8,7 @@ if (place_free(x, y+1))
   grav = getGravityForce();
 else{
   grav = 0;
-  xSign = 0;
+  xSpeedSign = 0;
   state = st_idle;
   exit;
 }
@@ -17,22 +17,39 @@ if (keyboard_check_released(key.jump) && ySpeed < 0)
   ySpeed /= 2;
 
 if (keyboard_check(key.right))    {
-  if (xSign != 1) || (xSpeed == 0){
-    xSign = 0;
+  if (xSpeedSign != 1) || (xSpeed == 0){
+    xSpeedSign = 0;
     xSpeed = m_airSpd;
   }
 }else if (keyboard_check(key.left)){
-  if ((xSign != -1) || (xSpeed == 0)){
-    xSign = 0;
+  if ((xSpeedSign != -1) || (xSpeed == 0)){
+    xSpeedSign = 0;
     xSpeed = -m_airSpd;
   }
 }
 
-if (place_meeting(x, y, oGrab) and !place_meeting(x, y+ySpeed, oGrab) && ySpeed > 0 && !place_free(x+dir, y)){
+var ySpeedAbs = abs(ySpeed);
+var ySpeedAbsFloor = floor(ySpeed);
+var tempBbTop = bbTop;
+
+repeat (ySpeedAbsFloor){
+  if (position_meeting(bbSide+dir, tempBbTop, oBlock) && !position_meeting(bbSide+dir, tempBbTop-1, oBlock) && (ySpeedSign > 0) && (dir != 0)){
+    hangingDir = dir;
+    ySpeed = 0;
+    grav = 0;
+    y += tempBbTop-bbTop;
+    state = st_hanging;
+    exit;
+  }else
+    tempBbTop++;
+}
+
+
+/*if (place_meeting(x+dir, y, oBlock) && position_meeting(side+dir, top+floor(abs(ySpeed)), oBlock) && ySpeedSign > 0 && dir != 0){
   repeat (abs(ySpeed)){
     y++;
     
-    if (!place_meeting(x, y, oGrab)){
+    if (position_meeting(side+dir, top, oBlock) && !position_meeting(side+dir, top-1, oBlock)){
       hangingDir = dir;
       ySpeed = 0;
       grav = 0;
@@ -40,4 +57,4 @@ if (place_meeting(x, y, oGrab) and !place_meeting(x, y+ySpeed, oGrab) && ySpeed 
       exit;
     }
   }
-}
+}*/

@@ -94,35 +94,22 @@
     <instance objName="oSlope" x="1088" y="2176" name="inst_9F972D3A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oWater" x="1024" y="2112" name="inst_562D8675" locked="0" code="" scaleX="31" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="3008" y="960" name="inst_820D3E99" locked="0" code="" scaleX="1" scaleY="20" colour="4294967295" rotation="0"/>
-    <instance objName="object0" x="384" y="256" name="inst_6B5B19DF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="object0" x="448" y="448" name="inst_6B5B19DF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="2368" y="1792" name="inst_D2DA6C4A" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oGrab" x="2304" y="1728" name="inst_EB334CB4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oGrab" x="2560" y="1728" name="inst_A1D9677C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="1984" y="1472" name="inst_2BD1E822" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oHalfBlock" x="2112" y="1472" name="inst_5D9EC2D5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oHalfBlock" x="1920" y="1472" name="inst_903E0B16" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oGrab" x="1856" y="1408" name="inst_2480A3EA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oGrab" x="2176" y="1408" name="inst_5B7A8B6F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oBlock" x="2496" y="1344" name="inst_CF7E9DB1" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="2240" y="1024" name="inst_C88598F5" locked="0" code="" scaleX="2.03174614906311" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oGrab" x="2432" y="960" name="inst_02757499" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oGrab" x="2176" y="960" name="inst_FB687C6D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oGrab" x="2432" y="1280" name="inst_6D8F9E8A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oGrab" x="2624" y="1280" name="inst_267A0675" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oGrab" x="1600" y="320" name="inst_9D2C1B04" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="1856" y="768" name="inst_33F1DC60" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oGrab" x="2112" y="704" name="inst_83D47062" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="1856" y="704" name="inst_114E994B" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oSlope" x="1984" y="704" name="inst_496A30C3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oSlope" x="1920" y="640" name="inst_3AF46ACA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="1856" y="640" name="inst_EF088AD5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oGrab" x="1792" y="576" name="inst_7900B169" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oHalfBlock" x="1088" y="576" name="inst_026D0A19" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="3008" y="0" name="inst_D8E81B12" locked="0" code="" scaleX="1" scaleY="12" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="2816" y="960" name="inst_30831FAF" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oHalfBlock" x="2944" y="1024" name="inst_F7E0812E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oHalfBlock" x="2752" y="960" name="inst_3DCAA316" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oGrab" x="2688" y="896" name="inst_BD77862C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="3072" y="960" name="inst_7EF28E9F" locked="0" code="" scaleX="16" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="3072" y="576" name="inst_C9D1C4CB" locked="0" code="" scaleX="16" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="4032" y="640" name="inst_1707B3A2" locked="0" code="" scaleX="1" scaleY="5" colour="4294967295" rotation="0"/>
@@ -130,6 +117,8 @@
     <instance objName="oHalfBlock" x="3968" y="640" name="inst_873FBE4D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oSlope" x="3968" y="896" name="inst_0665D684" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oHalfBlock" x="2368" y="1024" name="inst_D06A7EAA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oBlock" x="2496" y="1344" name="inst_6704ADCB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oBlock" x="2560" y="1344" name="inst_8A55BC3F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

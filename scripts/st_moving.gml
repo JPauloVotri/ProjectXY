@@ -8,10 +8,12 @@ if (place_free(x, y+1)){
   exit;
 }
 
-if (keyboard_check(key.right))
+/*if (keyboard_check(key.right))
   xSpeed = getSpeed();
 else if (keyboard_check(key.left))
-  xSpeed = -getSpeed();
+  xSpeed = -getSpeed();*/
+if (wantMove)
+  xSpeed = getSpeed()*dir
 else{
   state = st_idle;
   exit;

@@ -15,7 +15,7 @@ if (wantMove){
   exit;
 }else if (keyboard_check_pressed(key.jump) && !place_free(x,y+1)){
   ySpeed = -getJumpForce();
-  xSign = 0;
+  xSpeedSign = 0;
   state = st_air;
   exit;
 }

@@ -1,34 +1,49 @@
 //Adiciona gravidade
-ySpeed += grav;
+if (ySpeed < m_maxFallSpeed)
+  ySpeed += grav;
+
+var xSpeedAbs = abs(xSpeed);
+var ySpeedAbs = abs(ySpeed);
+
+var xSpeedAbsFloor = floor(xSpeedAbs);
+var ySpeedAbsFloor = floor(ySpeedAbs);
+
+var xSpeedFloor = floor(xSpeed);
+var ySpeedFloor = floor(ySpeed);
 
 //Horizontal
-xSign = sign(xSpeed);
+xSpeedSign = sign(xSpeed);
 
-repeat(abs(xSpeed)){
-    if (!place_meeting(x+xSign, y, oBlock)){
-        x += xSign;
-    }else if (!place_meeting(x+xSign, y-1, oBlock)){
-        x += xSign;
-        y--;
-    }else{
-        xSpeed = 0;
-    }
-    
-    if (!place_meeting(x, y+1, oBlock) && place_meeting(x, y+2, oBlock)){
-        y++;
-    }
-    
-    if (place_free(x, y+1) && state = st_idle)
-        state = st_air;
+repeat(xSpeedAbsFloor){
+  if (!place_meeting(x+xSpeedSign, y, oBlock)){
+    x += xSpeedSign;
+  }else if (!place_meeting(x+xSpeedSign, y-1, oBlock)){
+    x += xSpeedSign;
+    y--;
+  }else{
+    xSpeed = 0;
+  }
+  
+  if (!place_meeting(x, y+1, oBlock) && place_meeting(x, y+2, oBlock)){
+    y++;
+  }
 }
 
 //Vertical
-ySign = sign(ySpeed);
+ySpeedSign = sign(ySpeed);
 
-repeat(abs(ySpeed)){
-    if (place_free(x,y+ySign)){
-        y += ySign;
-    }else{
-        ySpeed = 0;
-    }
+repeat (ySpeedAbsFloor){/*
+  if (position_meeting(side+dir, top, oBlock) && !position_meeting(side+dir, top-1, oBlock) && (ySpeedSign > 0) && (dir != 0)){
+    hangingDir = dir;
+    ySpeed = 0;
+    grav = 0;
+    state = st_hanging;
+    exit;
+  }*/
+  
+  if (!place_meeting(x, y+ySpeedSign, oBlock)){
+    y += ySpeedSign;
+  }else{
+    ySpeed = 0;
+  }
 }

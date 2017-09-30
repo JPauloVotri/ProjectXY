@@ -27,15 +27,16 @@
             <kind>1</kind>
             <string>m_speed = 6;
 m_airSpd = 3;
-m_jumpForce = 18;
-xSign = 0;
-m_gForce = 0.75;
+m_jumpForce = 14;
+m_gForce = 0.5;
 m_hangingUpSpd = 4;
 m_canMoveInAir = false;
 m_fric = 0.97;
 m_waterDivider = 2;
 m_maxHp = 99;
+m_maxFallSpeed = 10;
 
+xSpeedSign = 0;
 hp = m_maxHp;
 
 state = st_idle; // Variavel que ira gerenciar o estado atual do personagem
@@ -70,10 +71,18 @@ grav = 0;
             <kind>1</kind>
             <string>/// Iniciação dos Scripts
 
-dir = keyboard_check(key().right) - keyboard_check(key().left); // Direção na qual o jogador está tentando andar, onde 1 é direita, -1 é esquerda e 0 é nulo;
-wantMove = abs(dir); // Variável booleana, que diz se o jogador quer mover o personagem ou não, pois precionando uma das teclas de movimento, os valores possíveis são 1 e -1, sendo que o absoluto destes valores, é 1, ou seja, 1 é "quer mover" e 0 é "não quer mover";
+dir = keyboard_check(key().right) - keyboard_check(key().left);
+wantMove = abs(dir);
 
-script_execute(state); // Executa o script correspondente ao estado atual do personagem;
+bbTop  = bbox_top;
+bbSide = 0;
+
+if (dir == 1)
+  bbSide = bbox_right;
+else if (dir == -1)
+  bbSide = bbox_left;
+
+script_execute(state);
 
 cleanMove(); // Executa o script de movimento limpo - By: Willy (GMBR);
 
@@ -100,35 +109,78 @@ if (keyboard_check_pressed(key().damage))
           <argument>
             <kind>1</kind>
             <string>/// Cheats
-if (keyboard_check_pressed(key().cheat))
-{
-    cheat = get_string("Enter a command: (mair | xspd | jump | hangspd | fric | waterDivisor | grav", "");
+if (keyboard_check_pressed(key().cheat)){
+  cheat = get_string("Enter a command: (xspd | jump | hangspd | fric | waterDivisor | grav | fall", "");
 
-    switch(cheat)
-    {
-        case "mair":
-            if (m_canMoveInAir) then m_canMoveInAir = false else m_canMoveInAir = true;
-        break;
-        case "xspd":
-            m_speed = get_integer("Enter the new speed:", m_speed);
-        break;
-        case "jump":
-            m_jumpForce = get_integer("Enter the new force:", m_jumpForce);
-        break;
-        case "hangspd":
-            m_hangingUpSpd = get_integer("Enter the new hanging up speed:", m_hangingUpSpd);
-        break;
-        case "fric":
-            m_fric = get_integer("Enter the new friction value:", m_fric);
-        break;
-        case "waterDivisor":
-            m_waterDivider = get_integer("Enter the new water divisor value:", m_waterDivider);
-        break;
-        case "grav":
-            m_gForce = get_integer("Enter the new gravity:", m_gForce);
-        break;
-    }
+  switch(cheat){
+    case "xspd":
+      m_speed = get_integer("Enter the new speed:", m_speed);
+    break;
+    case "jump":
+      m_jumpForce = get_integer("Enter the new force:", m_jumpForce);
+    break;
+    case "hangspd":
+      m_hangingUpSpd = get_integer("Enter the new hanging up speed:", m_hangingUpSpd);
+    break;
+    case "fric":
+      m_fric = get_integer("Enter the new friction value:", m_fric);
+    break;
+    case "waterDivisor":
+      m_waterDivider = get_integer("Enter the new water divisor value:", m_waterDivider);
+    break;
+    case "grav":
+      m_gForce = get_integer("Enter the new gravity:", m_gForce);
+    break;
+    case "fall":
+      m_maxFallSpeed = get_integer("Enter the new max fall speed:", m_maxFallSpeed);
+  }
 } 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_set_colour(c_black);
+draw_set_halign(fa_right);
+
+var top  = bbox_top;
+var side = 0;
+
+if (dir == 1)
+  side = bbox_right;
+else if (dir == -1)
+  side = bbox_left;
+else
+  side = x;
+
+draw_text(view_wview[0]-10, 10,
+          script_get_name(state)+"#"+
+          string(position_meeting(side+dir, top, oBlock))+"#"+
+          string(!position_meeting(side+dir, top-1, oBlock))+"#"+
+          string(floor(ySpeed))+": ySpeedFloor#"+
+          string(dir != 0)+
+          "#side: "+string(side)+
+          "#top: "+string(top)+
+          "#dir: "+string(dir)+
+          "#ySpeedSign: "+string(ySpeedSign));
+
 </string>
           </argument>
         </arguments>
