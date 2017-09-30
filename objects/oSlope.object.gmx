@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>image_speed = 0;
 
-if (!place_free(x-1, y))
+if (place_meeting(x-1, y, oBlock))
     image_index = 1;
 //else if (!place_free(x+1, y))
 //    sprite_index = spr_halfBlock_l;

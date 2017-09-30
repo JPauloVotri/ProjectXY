@@ -32,16 +32,8 @@ repeat(xSpeedAbsFloor){
 //Vertical
 ySpeedSign = sign(ySpeed);
 
-repeat (ySpeedAbsFloor){/*
-  if (position_meeting(side+dir, top, oBlock) && !position_meeting(side+dir, top-1, oBlock) && (ySpeedSign > 0) && (dir != 0)){
-    hangingDir = dir;
-    ySpeed = 0;
-    grav = 0;
-    state = st_hanging;
-    exit;
-  }*/
-  
-  if (!place_meeting(x, y+ySpeedSign, oBlock)){
+repeat (ySpeedAbsFloor){
+if (!place_meeting(x, y+ySpeedSign, oBlock)){
     y += ySpeedSign;
   }else{
     ySpeed = 0;

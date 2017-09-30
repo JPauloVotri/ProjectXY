@@ -47,6 +47,9 @@ hangingUp = false;
 ySpeed = 0;
 xSpeed = 0;
 grav = 0;
+
+//instance_create(x, y, oCamera);
+camera = initializeCamera();
 </string>
           </argument>
         </arguments>
@@ -110,7 +113,7 @@ if (keyboard_check_pressed(key().damage))
             <kind>1</kind>
             <string>/// Cheats
 if (keyboard_check_pressed(key().cheat)){
-  cheat = get_string("Enter a command: (xspd | jump | hangspd | fric | waterDivisor | grav | fall", "");
+  cheat = get_string("Enter a command: (xspd | jump | hangspd | fric | waterDivisor | grav | fall | (x/y)CamDist | camSpeed", "");
 
   switch(cheat){
     case "xspd":
@@ -133,6 +136,15 @@ if (keyboard_check_pressed(key().cheat)){
     break;
     case "fall":
       m_maxFallSpeed = get_integer("Enter the new max fall speed:", m_maxFallSpeed);
+    break;
+    case "xCamDist":
+      camera.xDistance = get_integer("Enter the new camera x distance:", camera.xDistance);
+    break;
+    case "yCamDist":
+      camera.yDistance = get_integer("Enter the new camera y distance:", camera.yDistance);
+    break;
+    case "camSpeed":
+      camera.m_speed = get_integer("Enter the new camera speed:", camera.m_speed);
   }
 } 
 </string>
@@ -169,17 +181,24 @@ else if (dir == -1)
   side = bbox_left;
 else
   side = x;
+  
+var inHiddenArea = false;
+
+if (!inHiddenArea)
+  inHiddenArea = place_meeting(x, y, oHiddenPlace);
+else
+  inHiddenArea = place_meeting(camera.x, camera.y, oHiddenPlace);
 
 draw_text(view_wview[0]-10, 10,
-          script_get_name(state)+"#"+
-          string(position_meeting(side+dir, top, oBlock))+"#"+
-          string(!position_meeting(side+dir, top-1, oBlock))+"#"+
-          string(floor(ySpeed))+": ySpeedFloor#"+
-          string(dir != 0)+
+          script_get_name(state)+
           "#side: "+string(side)+
           "#top: "+string(top)+
           "#dir: "+string(dir)+
-          "#ySpeedSign: "+string(ySpeedSign));
+          "#xSpeedSign: "+string(xSpeedSign)+
+          "#ySpeedSign: "+string(ySpeedSign)+
+          "#inHiddenArea: "+string(camera.inHiddenArea)/*+
+          "#xCameraSpeedSign: "+string(camera.xSpeedSign)+
+          "#yCameraSpeedSign: "+string(camera.ySpeedSign)*/);
 
 </string>
           </argument>

@@ -3,7 +3,7 @@ if (place_meeting(x, y, oWater) && !inWater)
 if (!place_meeting(x, y, oWater) && inWater)
   inWater = false;
 
-if (place_free(x, y+1)){
+if (!place_meeting(x, y+1, oBlock)){
   state = st_air;
   exit;
 }
@@ -19,7 +19,7 @@ else{
   exit;
 }
 
-if (keyboard_check_pressed(key.jump) && !place_free(x,y+1)){
+if (keyboard_check_pressed(key.jump) && place_meeting(x, y+1, oBlock)){
   ySpeed = -getJumpForce();
   state = st_air;
   exit;

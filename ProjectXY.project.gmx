@@ -13,6 +13,8 @@
     <sprite>sprites\sGrab</sprite>
     <sprite>sprites\sIce</sprite>
     <sprite>sprites\sWater</sprite>
+    <sprite>sprites\sCamera</sprite>
+    <sprite>sprites\sHiddenPlace</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tile_test</background>
@@ -22,7 +24,6 @@
   <scripts name="scripts">
     <script>scripts\key.gml</script>
     <script>scripts\cleanMove.gml</script>
-    <script>scripts\scr_0.gml</script>
     <scripts name="States">
       <script>scripts\st_idle.gml</script>
       <script>scripts\st_moving.gml</script>
@@ -38,15 +39,19 @@
       </scripts>
       <script>scripts\takeDamage.gml</script>
     </scripts>
+    <script>scripts\cameraPositioning.gml</script>
+    <script>scripts\initializeCamera.gml</script>
   </scripts>
   <objects name="objects">
-    <object>objects\object0</object>
+    <object>objects\oPlayer</object>
     <object>objects\oBlock</object>
     <object>objects\oSlope</object>
     <object>objects\oGrab</object>
     <object>objects\oHalfBlock</object>
     <object>objects\oIce</object>
     <object>objects\oWater</object>
+    <object>objects\oHiddenPlace</object>
+    <object>objects\oCamera</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room3</room>

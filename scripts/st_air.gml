@@ -4,7 +4,7 @@ else if (!place_meeting(x, y, oWater) && inWater)
   inWater = false;
 
 
-if (place_free(x, y+1))
+if (!place_meeting(x, y+1, oBlock))
   grav = getGravityForce();
 else{
   grav = 0;
@@ -29,7 +29,7 @@ if (keyboard_check(key.right))    {
 }
 
 var ySpeedAbs = abs(ySpeed);
-var ySpeedAbsFloor = floor(ySpeed);
+var ySpeedAbsFloor = floor(ySpeedAbs);
 var tempBbTop = bbTop;
 
 repeat (ySpeedAbsFloor){
@@ -43,18 +43,3 @@ repeat (ySpeedAbsFloor){
   }else
     tempBbTop++;
 }
-
-
-/*if (place_meeting(x+dir, y, oBlock) && position_meeting(side+dir, top+floor(abs(ySpeed)), oBlock) && ySpeedSign > 0 && dir != 0){
-  repeat (abs(ySpeed)){
-    y++;
-    
-    if (position_meeting(side+dir, top, oBlock) && !position_meeting(side+dir, top-1, oBlock)){
-      hangingDir = dir;
-      ySpeed = 0;
-      grav = 0;
-      state = st_hanging;
-      exit;
-    }
-  }
-}*/

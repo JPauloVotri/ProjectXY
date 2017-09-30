@@ -1,4 +1,4 @@
-if (place_free(x, y+1)){
+if (!place_meeting(x, y+1, oBlock)){
   state = st_air;
 }
 
