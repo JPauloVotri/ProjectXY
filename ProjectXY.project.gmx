@@ -15,6 +15,7 @@
     <sprite>sprites\sWater</sprite>
     <sprite>sprites\sCamera</sprite>
     <sprite>sprites\sHiddenPlace</sprite>
+    <sprite>sprites\sBeam</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tile_test</background>
@@ -23,7 +24,7 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\key.gml</script>
+    <script>scripts\initKeys.gml</script>
     <script>scripts\cleanMove.gml</script>
     <scripts name="States">
       <script>scripts\st_idle.gml</script>
@@ -39,6 +40,7 @@
         <script>scripts\getHangingUpSpeed.gml</script>
       </scripts>
       <script>scripts\takeDamage.gml</script>
+      <script>scripts\instantiateShoot.gml</script>
     </scripts>
     <script>scripts\cameraPositioning.gml</script>
     <script>scripts\initializeCamera.gml</script>
@@ -61,6 +63,7 @@
     <object>objects\oWater</object>
     <object>objects\oHiddenPlace</object>
     <object>objects\oCamera</object>
+    <object>objects\oBeam</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room3</room>

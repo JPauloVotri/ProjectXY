@@ -3,7 +3,7 @@ if (!place_meeting(x, y+1, oBlock)){
 }
 
 if (place_meeting(x, y+1, oIce)){
-  xSpeed *= m_fric;
+  xSpeed *= FRICTIONFORCE;
     
   if (abs(xSpeed) < 0.001)
     xSpeed = 0;

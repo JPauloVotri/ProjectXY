@@ -19,12 +19,12 @@ if (keyboard_check_released(key.jump) && ySpeed < 0)
 if (keyboard_check(key.right))    {
   if (xSpeedSign != 1) || (xSpeed == 0){
     xSpeedSign = 0;
-    xSpeed = m_airSpd;
+    xSpeed = AIRSPEED;
   }
 }else if (keyboard_check(key.left)){
   if ((xSpeedSign != -1) || (xSpeed == 0)){
     xSpeedSign = 0;
-    xSpeed = -m_airSpd;
+    xSpeed = -AIRSPEED;
   }
 }
 

@@ -1,6 +1,6 @@
 /// getJumpForce();
 
 if (inWater)
-  return m_jumpForce / m_waterDivider;
+  return JUMPFORCE / WATERDIVIDER;
   
-return m_jumpForce;
+return JUMPFORCE;

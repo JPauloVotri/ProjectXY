@@ -25,19 +25,22 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>m_speed = 6;
-m_airSpd = 3;
-m_jumpForce = 14;
-m_gForce = 0.5;
-m_hangingUpSpd = 4;
-m_canMoveInAir = false;
-m_fric = 0.97;
-m_waterDivider = 2;
-m_maxHp = 99;
-m_maxFallSpeed = 10;
+            <string>SPEED = 6;
+AIRSPEED = 3;
+JUMPFORCE = 14;
+GRAVITYFORCE = 0.5;
+HANGINGUPSPEED = 4;
+FREEMOVEINAIR = false;
+FRICTIONFORCE = 0.97;
+WATERDIVIDER = 2;
+MAXHP = 99;
+MAXFALLSPEED = 10;
+SHOOTCOOLDOWN = 10;
 
 xSpeedSign = 0;
-hp = m_maxHp;
+hp = MAXHP;
+facing = 1;
+shootCooldown = 0;
 
 state = st_idle; // Variavel que ira gerenciar o estado atual do personagem
 
@@ -49,8 +52,9 @@ xSpeed = 0;
 grav = 0;
 
 //instance_create(x, y, oCamera);
-camera = initializeCamera();
+cameraInstance = initializeCamera();
 
+initKeys();
 map = loadMap();
 </string>
           </argument>
@@ -76,8 +80,11 @@ map = loadMap();
             <kind>1</kind>
             <string>/// Iniciação dos Scripts
 
-dir = keyboard_check(key().right) - keyboard_check(key().left);
+dir = keyboard_check(key.right) - keyboard_check(key.left);
 wantMove = abs(dir);
+
+if (wantMove == 1)
+  facing = dir;
 
 bbTop  = bbox_top;
 bbSide = 0;
@@ -89,9 +96,17 @@ else if (dir == -1)
 
 script_execute(state);
 
+if (keyboard_check_pressed(key.shoot) &amp;&amp; shootCooldown == 0){
+  instantiateShoot(facing);
+  shootCooldown = SHOOTCOOLDOWN;
+}
+
+if (shootCooldown &gt; 0)
+  shootCooldown--;
+
 cleanMove(); // Executa o script de movimento limpo - By: Willy (GMBR);
 
-if (keyboard_check_pressed(key().damage))
+if (keyboard_check_pressed(key.damage))
     takeDamage(5);
 </string>
           </argument>
@@ -114,39 +129,39 @@ if (keyboard_check_pressed(key().damage))
           <argument>
             <kind>1</kind>
             <string>/// Cheats
-if (keyboard_check_pressed(key().cheat)){
+if (keyboard_check_pressed(key.cheat)){
   cheat = get_string("Enter a command: (xspd | jump | hangspd | fric | waterDivisor | grav | fall | (x/y)CamDist | camSpeed", "");
 
   switch(cheat){
     case "xspd":
-      m_speed = get_integer("Enter the new speed:", m_speed);
+      SPEED = get_integer("Enter the new speed:", SPEED);
     break;
     case "jump":
-      m_jumpForce = get_integer("Enter the new force:", m_jumpForce);
+      JUMPFORCE = get_integer("Enter the new force:", JUMPFORCE);
     break;
     case "hangspd":
-      m_hangingUpSpd = get_integer("Enter the new hanging up speed:", m_hangingUpSpd);
+      HANGINGUPSPEED = get_integer("Enter the new hanging up speed:", HANGINGUPSPEED);
     break;
     case "fric":
-      m_fric = get_integer("Enter the new friction value:", m_fric);
+      FRICTIONFORCE = get_integer("Enter the new friction value:", FRICTIONFORCE);
     break;
     case "waterDivisor":
-      m_waterDivider = get_integer("Enter the new water divisor value:", m_waterDivider);
+      WATERDIVIDER = get_integer("Enter the new water divisor value:", WATERDIVIDER);
     break;
     case "grav":
-      m_gForce = get_integer("Enter the new gravity:", m_gForce);
+      GRAVITYFORCE = get_integer("Enter the new gravity:", GRAVITYFORCE);
     break;
     case "fall":
-      m_maxFallSpeed = get_integer("Enter the new max fall speed:", m_maxFallSpeed);
+      MAXFALLSPEED = get_integer("Enter the new max fall speed:", MAXFALLSPEED);
     break;
     case "xCamDist":
-      camera.xDistance = get_integer("Enter the new camera x distance:", camera.xDistance);
+      cameraInstance.xDistance = get_integer("Enter the new camera x distance:", cameraInstance.xDistance);
     break;
     case "yCamDist":
-      camera.yDistance = get_integer("Enter the new camera y distance:", camera.yDistance);
+      cameraInstance.yDistance = get_integer("Enter the new camera y distance:", cameraInstance.yDistance);
     break;
     case "camSpeed":
-      camera.m_speed = get_integer("Enter the new camera speed:", camera.m_speed);
+      cameraInstance.SPEED = get_integer("Enter the new camera speed:", SPEED);
   }
 } 
 </string>
@@ -191,7 +206,7 @@ var inHiddenArea = false;
 if (!inHiddenArea)
   inHiddenArea = place_meeting(x, y, oHiddenPlace);
 else
-  inHiddenArea = place_meeting(camera.x, camera.y, oHiddenPlace);
+  inHiddenArea = place_meeting(cameraInstance.x, cameraInstance.y, oHiddenPlace);
 
 draw_text(view_wview[0]-10, 10,
           script_get_name(state)+
@@ -200,9 +215,11 @@ draw_text(view_wview[0]-10, 10,
           "#dir: "+string(dir)+
           "#xSpeedSign: "+string(xSpeedSign)+
           "#ySpeedSign: "+string(ySpeedSign)+
-          "#inHiddenArea: "+string(camera.inHiddenArea)/*+
-          "#xCameraSpeedSign: "+string(camera.xSpeedSign)+
-          "#yCameraSpeedSign: "+string(camera.ySpeedSign)*/);
+          "#inHiddenArea: "+string(cameraInstance.inHiddenArea)+
+          "#facing: "+string(facing)+
+          "#shootCooldown: "+string(shootCooldown)/*+
+          "#xCameraSpeedSign: "+string(cameraInstance.xSpeedSign)+
+          "#yCameraSpeedSign: "+string(cameraInstance.ySpeedSign)*/);
 
 </string>
           </argument>

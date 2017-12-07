@@ -8,8 +8,8 @@ var yPlayerSpeedSign = oPlayer.ySpeedSign;
 xTo = xPlayer + xPlayerSpeedSign*xDistance;
 yTo = yPlayer + yPlayerSpeedSign*yDistance;
 
-xSpeed = (xTo-x)/m_speed;
-ySpeed = (yTo-y)/m_speed;
+xSpeed = (xTo-x)/SPEED;
+ySpeed = (yTo-y)/SPEED;
 
 xSpeed = floor(xSpeed);
 ySpeed = floor(ySpeed);

@@ -1,6 +1,6 @@
 /// getHangingUpSpeed();
 
 if (inWater)
-  return m_hangingUpSpd / m_waterDivider;
+  return HANGINGUPSPEED / WATERDIVIDER;
   
-return m_hangingUpSpd;
+return HANGINGUPSPEED;

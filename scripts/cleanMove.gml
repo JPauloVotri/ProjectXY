@@ -1,5 +1,5 @@
 //Adiciona gravidade
-if (ySpeed < m_maxFallSpeed)
+if (ySpeed < MAXFALLSPEED)
   ySpeed += grav;
 
 var xSpeedAbs = abs(xSpeed);

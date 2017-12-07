@@ -1,6 +1,6 @@
 /// getGravityForce();
 
 if (inWater)
-  return m_gForce / m_waterDivider;
+  return GRAVITYFORCE / WATERDIVIDER;
   
-return m_gForce;
+return GRAVITYFORCE;

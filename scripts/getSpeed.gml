@@ -1,6 +1,6 @@
 /// getSpeed();
 
 if (inWater)
-  return m_speed / m_waterDivider;
+  return SPEED / WATERDIVIDER;
   
-return m_speed;
+return SPEED;
