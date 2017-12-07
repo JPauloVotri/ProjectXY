@@ -6,44 +6,30 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\sprite0</sprite>
-    <sprite>sprites\sBlock</sprite>
-    <sprite>sprites\sHalfBlock</sprite>
-    <sprite>sprites\sSlope</sprite>
+    <sprites name="Blocks">
+      <sprite>sprites\sBlock</sprite>
+      <sprite>sprites\sHalfBlock</sprite>
+      <sprite>sprites\sIce</sprite>
+      <sprite>sprites\sSlope</sprite>
+    </sprites>
+    <sprites name="Player">
+      <sprite>sprites\sprite0</sprite>
+      <sprite>sprites\sBeam</sprite>
+      <sprite>sprites\sCamera</sprite>
+    </sprites>
     <sprite>sprites\sGrab</sprite>
-    <sprite>sprites\sIce</sprite>
     <sprite>sprites\sWater</sprite>
-    <sprite>sprites\sCamera</sprite>
     <sprite>sprites\sHiddenPlace</sprite>
-    <sprite>sprites\sBeam</sprite>
+    <sprite>sprites\sMapLocation</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tile_test</background>
     <background>background\bRoomTest</background>
-    <background>background\bgMapTileset</background>
+    <background>background\bgNormalMapTileset</background>
+    <background>background\bgEntrancesMapTileset</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\initKeys.gml</script>
-    <script>scripts\cleanMove.gml</script>
-    <scripts name="States">
-      <script>scripts\st_idle.gml</script>
-      <script>scripts\st_moving.gml</script>
-      <script>scripts\st_air.gml</script>
-      <script>scripts\st_hanging.gml</script>
-    </scripts>
-    <scripts name="PlayerScripts">
-      <scripts name="Getters">
-        <script>scripts\getSpeed.gml</script>
-        <script>scripts\getJumpForce.gml</script>
-        <script>scripts\getGravityForce.gml</script>
-        <script>scripts\getHangingUpSpeed.gml</script>
-      </scripts>
-      <script>scripts\takeDamage.gml</script>
-      <script>scripts\instantiateShoot.gml</script>
-    </scripts>
-    <script>scripts\cameraPositioning.gml</script>
-    <script>scripts\initializeCamera.gml</script>
     <scripts name="Map">
       <script>scripts\loadMap.gml</script>
       <script>scripts\saveMap.gml</script>
@@ -52,22 +38,49 @@
       <script>scripts\getTileLeft.gml</script>
       <script>scripts\getTileTop.gml</script>
     </scripts>
+    <scripts name="PlayerScripts">
+      <scripts name="Camera">
+        <script>scripts\cameraPositioning.gml</script>
+        <script>scripts\initializeCamera.gml</script>
+      </scripts>
+      <scripts name="Getters">
+        <script>scripts\getSpeed.gml</script>
+        <script>scripts\getJumpForce.gml</script>
+        <script>scripts\getGravityForce.gml</script>
+        <script>scripts\getHangingUpSpeed.gml</script>
+      </scripts>
+      <script>scripts\cleanMove.gml</script>
+      <script>scripts\instantiateShoot.gml</script>
+      <script>scripts\takeDamage.gml</script>
+    </scripts>
+    <scripts name="States">
+      <script>scripts\st_idle.gml</script>
+      <script>scripts\st_moving.gml</script>
+      <script>scripts\st_air.gml</script>
+      <script>scripts\st_hanging.gml</script>
+    </scripts>
+    <script>scripts\initKeys.gml</script>
+    <script>scripts\drawHud.gml</script>
   </scripts>
   <objects name="objects">
-    <object>objects\oPlayer</object>
-    <object>objects\oBlock</object>
-    <object>objects\oSlope</object>
+    <objects name="Blocks">
+      <object>objects\oBlock</object>
+      <object>objects\oHalfBlock</object>
+      <object>objects\oIce</object>
+      <object>objects\oSlope</object>
+    </objects>
+    <objects name="Player">
+      <object>objects\oPlayer</object>
+      <object>objects\oBeam</object>
+      <object>objects\oCamera</object>
+    </objects>
     <object>objects\oGrab</object>
-    <object>objects\oHalfBlock</object>
-    <object>objects\oIce</object>
     <object>objects\oWater</object>
     <object>objects\oHiddenPlace</object>
-    <object>objects\oCamera</object>
-    <object>objects\oBeam</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room3</room>
-    <room>rooms\MetroidvaniaMapTest</room>
+    <room>rooms\Map</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
