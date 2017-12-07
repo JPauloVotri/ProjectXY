@@ -19,6 +19,7 @@
   <backgrounds name="background">
     <background>background\tile_test</background>
     <background>background\bRoomTest</background>
+    <background>background\bgMapTileset</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -41,6 +42,14 @@
     </scripts>
     <script>scripts\cameraPositioning.gml</script>
     <script>scripts\initializeCamera.gml</script>
+    <scripts name="Map">
+      <script>scripts\loadMap.gml</script>
+      <script>scripts\saveMap.gml</script>
+      <script>scripts\drawMap.gml</script>
+      <script>scripts\scanMap.gml</script>
+      <script>scripts\getTileLeft.gml</script>
+      <script>scripts\getTileTop.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\oPlayer</object>
@@ -55,6 +64,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room3</room>
+    <room>rooms\MetroidvaniaMapTest</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

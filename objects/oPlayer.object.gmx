@@ -50,6 +50,8 @@ grav = 0;
 
 //instance_create(x, y, oCamera);
 camera = initializeCamera();
+
+map = loadMap();
 </string>
           </argument>
         </arguments>
@@ -169,7 +171,9 @@ if (keyboard_check_pressed(key().cheat)){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_colour(c_black);
+            <string>drawMap(map, floor(x/view_wview[0]), floor(y/view_hview[0]), 10, 10);
+
+draw_set_colour(c_black);
 draw_set_halign(fa_right);
 
 var top  = bbox_top;
