@@ -61,6 +61,7 @@
     </scripts>
     <script>scripts\initKeys.gml</script>
     <script>scripts\drawHud.gml</script>
+    <script>scripts\healthBehaviour.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fHud</font>

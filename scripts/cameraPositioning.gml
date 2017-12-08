@@ -1,5 +1,6 @@
 /// cameraPositioning();
 
+//--- Instanciação de variáveis do personagem ---
 var xPlayer = oPlayer.x;
 var yPlayer = oPlayer.y;
 var xPlayerSpeedSign = oPlayer.xSpeedSign;

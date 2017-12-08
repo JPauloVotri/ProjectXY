@@ -33,7 +33,7 @@ var ySpeedAbsFloor = floor(ySpeedAbs);
 var tempBbTop = bbTop;
 
 repeat (ySpeedAbsFloor){
-  if (position_meeting(bbSide+dir, tempBbTop, oBlock) && !position_meeting(bbSide+dir, tempBbTop-1, oBlock) && (ySpeedSign > 0) && (dir != 0)){
+  if (position_meeting(bbFace+dir, tempBbTop, oBlock) && !position_meeting(bbFace+dir, tempBbTop-1, oBlock) && (ySpeedSign > 0) && (dir != 0)){
     hangingDir = dir;
     ySpeed = 0;
     grav = 0;

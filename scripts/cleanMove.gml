@@ -1,7 +1,13 @@
-//Adiciona gravidade
+/// cleanMove();
+/*
+  Script de movimento limpo - By: Willy (GMBR);
+*/
+
+//--- Adiciona gravidade ---
 if (ySpeed < MAXFALLSPEED)
   ySpeed += grav;
 
+//--- Instanciação de variáveis ---
 var xSpeedAbs = abs(xSpeed);
 var ySpeedAbs = abs(ySpeed);
 
@@ -11,7 +17,7 @@ var ySpeedAbsFloor = floor(ySpeedAbs);
 var xSpeedFloor = floor(xSpeed);
 var ySpeedFloor = floor(ySpeed);
 
-//Horizontal
+//--- Movimentação Horizontal ---
 xSpeedSign = sign(xSpeed);
 
 repeat(xSpeedAbsFloor){
@@ -29,7 +35,7 @@ repeat(xSpeedAbsFloor){
   }
 }
 
-//Vertical
+//--- Movimentação Vertical ---
 ySpeedSign = sign(ySpeed);
 
 repeat (ySpeedAbsFloor){

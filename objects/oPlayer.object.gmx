@@ -35,7 +35,7 @@ FRICTIONFORCE = 0.97;
 WATERDIVIDER = 2;
 MAXHP = 99;
 MAXFALLSPEED = 10;
-SHOOTCOOLDOWN = 10;
+SHOOTCOOLDOWNVALUE = 10;
 // Hud Positions
 XMAP = 28;
 YMAP = 20;
@@ -49,14 +49,16 @@ extraLifes = 0;
 extraLifesTotal = 0;
 shootCooldown = 0;
 mapPositionTick = 0;
+dir = 0;
+facing = 1;
 ySpeed = 0;
 xSpeed = 0;
 xSpeedSign = 0;
 grav = 0;
-facing = 1;
 
 inWater = false;
 hangingUp = false;
+wantMove = false;
 
 
 state = st_idle; // Variavel que ira gerenciar o estado atual do personagem
@@ -88,52 +90,88 @@ map = loadMap();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Iniciação dos Scripts
+            <string>/// Verificação de direção do personagem
 
+/*
+Verifica teclas precionadas e posições de bounding box
+(extremidades da máscara de colisão);
+*/
+
+//--- Teclas de movimento e direção ---
 dir = keyboard_check(key.right) - keyboard_check(key.left);
 wantMove = abs(dir);
 
-if (wantMove == 1)
-  facing = dir;
+facing = wantMove * dir;
 
+//--- Variáveis de Bounding Box ---
 bbTop  = bbox_top;
-bbSide = 0;
+bbFace = 0;
 
 if (dir == 1)
-  bbSide = bbox_right;
+  bbFace = bbox_right;
 else if (dir == -1)
-  bbSide = bbox_left;
+  bbFace = bbox_left;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Variaveis de contagem
 
-script_execute(state);
-
-if (keyboard_check_pressed(key.shoot) &amp;&amp; shootCooldown == 0){
-  instantiateShoot(facing);
-  shootCooldown = SHOOTCOOLDOWN;
-}
-
+//--- Tempo de tiro ---
 if (shootCooldown &gt; 0)
   shootCooldown--;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Executa scripts
 
-if (hp &gt; MAXHP){
-  if (extraLifesTotal - extraLifes &gt; 0){
-    extraLifes++;
-    hp -= 100;
-  }else
-    hp = 99;
+//--- Executa script do estado atual ---
+script_execute(state);
+
+//--- Executa script de tiro
+if (keyboard_check_pressed(key.shoot) &amp;&amp; shootCooldown == 0){
+  instantiateShoot(facing);
+  shootCooldown = SHOOTCOOLDOWNVALUE;
 }
 
-if (hp &lt; 0){
-  if (extraLifes &gt; 0){
-    extraLifes--;
-    hp += 100;
-  }else
-    hp = 0;
-}
+//--- Script do comportamento da vida ---
+healthBehaviour();
 
-cleanMove(); // Executa o script de movimento limpo - By: Willy (GMBR);
-
-if (keyboard_check_pressed(key.damage))
-    takeDamage(5);
+//--- Script de movimento ---
+cleanMove();
 </string>
           </argument>
         </arguments>
@@ -398,10 +436,52 @@ extraLifes = extraLifesTotal;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>extraLifesTotal--;
+            <string>/// Iniciação dos Scripts
 
-if (extraLifes &gt;= extraLifesTotal)
-  extraLifes = extraLifesTotal;
+dir = keyboard_check(key.right) - keyboard_check(key.left);
+wantMove = abs(dir);
+
+if (wantMove == 1)
+  facing = dir;
+
+bbTop  = bbox_top;
+bbSide = 0;
+
+if (dir == 1)
+  bbSide = bbox_right;
+else if (dir == -1)
+  bbSide = bbox_left;
+
+script_execute(state);
+
+if (keyboard_check_pressed(key.shoot) &amp;&amp; shootCooldown == 0){
+  instantiateShoot(facing);
+  shootCooldown = SHOOTCOOLDOWNVALUE;
+}
+
+if (shootCooldown &gt; 0)
+  shootCooldown--;
+
+if (hp &gt; MAXHP){
+  if (extraLifesTotal - extraLifes &gt; 0){
+    extraLifes++;
+    hp -= 100;
+  }else
+    hp = 99;
+}
+
+if (hp &lt; 0){
+  if (extraLifes &gt; 0){
+    extraLifes--;
+    hp += 100;
+  }else
+    hp = 0;
+}
+
+cleanMove(); // Executa o script de movimento limpo - By: Willy (GMBR);
+
+if (keyboard_check_pressed(key.damage))
+    takeDamage(5);
 </string>
           </argument>
         </arguments>
