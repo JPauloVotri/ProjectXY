@@ -62,6 +62,10 @@
     <script>scripts\initKeys.gml</script>
     <script>scripts\drawHud.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fHud</font>
+    <font>fonts\fDebug</font>
+  </fonts>
   <objects name="objects">
     <objects name="Blocks">
       <object>objects\oBlock</object>
