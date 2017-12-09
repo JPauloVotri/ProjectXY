@@ -101,7 +101,8 @@ Verifica teclas precionadas e posições de bounding box
 dir = keyboard_check(key.right) - keyboard_check(key.left);
 wantMove = abs(dir);
 
-facing = wantMove * dir;
+if (wantMove)
+  facing = dir;
 
 //--- Variáveis de Bounding Box ---
 bbTop  = bbox_top;
@@ -131,11 +132,11 @@ else if (dir == -1)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Variaveis de contagem
+            <string>/// Incrementação de variáveis de contagem
 
 //--- Tempo de tiro ---
-if (shootCooldown &gt; 0)
-  shootCooldown--;
+if (shootCooldown &lt; SHOOTCOOLDOWNVALUE)
+  shootCooldown++;
 </string>
           </argument>
         </arguments>
@@ -162,9 +163,9 @@ if (shootCooldown &gt; 0)
 script_execute(state);
 
 //--- Executa script de tiro
-if (keyboard_check_pressed(key.shoot) &amp;&amp; shootCooldown == 0){
+if (keyboard_check_pressed(key.shoot) &amp;&amp; shootCooldown &gt;= SHOOTCOOLDOWNVALUE){
   instantiateShoot(facing);
-  shootCooldown = SHOOTCOOLDOWNVALUE;
+  shootCooldown = 0;
 }
 
 //--- Script do comportamento da vida ---
