@@ -3,8 +3,8 @@
   <caption></caption>
   <width>4096</width>
   <height>2304</height>
-  <vsnap>64</vsnap>
-  <hsnap>64</hsnap>
+  <vsnap>8</vsnap>
+  <hsnap>8</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -120,7 +120,13 @@
     <instance objName="oBlock" x="2560" y="1344" name="inst_8A55BC3F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oHiddenPlace" x="0" y="576" name="inst_3D234717" locked="0" code="" scaleX="16" scaleY="27" colour="4294967295" rotation="0"/>
     <instance objName="oHiddenPlace" x="3072" y="0" name="inst_19A2F222" locked="0" code="" scaleX="16" scaleY="36" colour="4294967295" rotation="0"/>
-    <instance objName="oPlayer" x="320" y="0" name="inst_3F9976B5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oPlayer" x="128" y="0" name="inst_3F9976B5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oBlock" x="448" y="64" name="inst_BDEC68F6" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oBlock" x="448" y="448" name="inst_301AD21A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oTurret" x="72" y="192" name="inst_A0766E0E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oTurret" x="440" y="88" name="inst_60E2EFB1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oTurret" x="496" y="136" name="inst_C2A00F19" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oTurret" x="480" y="440" name="inst_8A61A658" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

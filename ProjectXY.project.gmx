@@ -12,6 +12,12 @@
       <sprite>sprites\sIce</sprite>
       <sprite>sprites\sSlope</sprite>
     </sprites>
+    <sprites name="Enemies">
+      <sprite>sprites\sTurretBody</sprite>
+      <sprite>sprites\sTurretHead</sprite>
+      <sprite>sprites\sTurret</sprite>
+      <sprite>sprites\sTurretBullet</sprite>
+    </sprites>
     <sprites name="Player">
       <sprite>sprites\sprite0</sprite>
       <sprite>sprites\sBeam</sprite>
@@ -52,6 +58,8 @@
       <script>scripts\cleanMove.gml</script>
       <script>scripts\instantiateShoot.gml</script>
       <script>scripts\takeDamage.gml</script>
+      <script>scripts\decreaseLife.gml</script>
+      <script>scripts\increaseLife.gml</script>
     </scripts>
     <scripts name="States">
       <script>scripts\st_idle.gml</script>
@@ -62,6 +70,7 @@
     <script>scripts\initKeys.gml</script>
     <script>scripts\drawHud.gml</script>
     <script>scripts\healthBehaviour.gml</script>
+    <script>scripts\turretShoot.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fHud</font>
@@ -73,6 +82,10 @@
       <object>objects\oHalfBlock</object>
       <object>objects\oIce</object>
       <object>objects\oSlope</object>
+    </objects>
+    <objects name="Enemies">
+      <object>objects\oTurret</object>
+      <object>objects\oTurretBullet</object>
     </objects>
     <objects name="Player">
       <object>objects\oPlayer</object>

@@ -325,8 +325,6 @@ else
 
 draw_text(view_wview[0]-10, 10,
           script_get_name(state)+
-          "#side: "+string(side)+
-          "#top: "+string(top)+
           "#dir: "+string(dir)+
           "#xSpeedSign: "+string(xSpeedSign)+
           "#ySpeedSign: "+string(ySpeedSign)+
@@ -481,7 +479,7 @@ if (hp &lt; 0){
 cleanMove(); // Executa o script de movimento limpo - By: Willy (GMBR);
 
 if (keyboard_check_pressed(key.damage))
-    takeDamage(5);
+    takeDamage(5, -45);
 </string>
           </argument>
         </arguments>
