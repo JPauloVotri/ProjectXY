@@ -20,13 +20,13 @@ if (extraLifesTotal > 0){
 draw_set_colour($000000);
 draw_roundrect(XHP - 30, YHP - 26, XHP + 25, YHP+25, false);
 
-draw_set_colour($009900);
+draw_set_colour($4A7700);
 draw_rectangle(XHP - 20, YHP - 20, XHP + 20, YHP+20, false);
 
 draw_set_font(fHud);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
-draw_set_colour($09C109);
+draw_set_colour($77C000);
 draw_text(XHP, YHP, hp);
 
 //--- Map ---
