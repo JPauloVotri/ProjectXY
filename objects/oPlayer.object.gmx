@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>2</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -56,6 +56,7 @@ xSpeed = 0;
 xSpeedSign = 0;
 grav = 0;
 
+isGrounded = false;
 inWater = false;
 hangingUp = false;
 wantMove = false;
@@ -68,6 +69,10 @@ cameraInstance = initializeCamera();
 
 initKeys();
 map = loadMap();
+
+
+global.roomTrans = false;
+global.gamePaused = false;
 </string>
           </argument>
         </arguments>
@@ -103,6 +108,8 @@ wantMove = abs(dir);
 
 if (wantMove)
   facing = dir;
+
+isGrounded = place_meeting(x, y+1, oBlock);
 
 //--- Variáveis de Bounding Box ---
 bbTop  = bbox_top;
@@ -158,6 +165,10 @@ if (shootCooldown &lt; SHOOTCOOLDOWNVALUE)
           <argument>
             <kind>1</kind>
             <string>///Executa scripts
+
+//--- Inicializa a camera caso não exista ---
+if (!instance_exists(oCamera))
+  cameraInstance = initializeCamera();
 
 //--- Executa script do estado atual ---
 script_execute(state);

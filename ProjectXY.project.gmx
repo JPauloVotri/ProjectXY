@@ -27,6 +27,8 @@
     <sprite>sprites\sWater</sprite>
     <sprite>sprites\sHiddenPlace</sprite>
     <sprite>sprites\sMapLocation</sprite>
+    <sprite>sprites\sDoor</sprite>
+    <sprite>sprites\sRoomChanger</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tile_test</background>
@@ -71,6 +73,7 @@
     <script>scripts\drawHud.gml</script>
     <script>scripts\healthBehaviour.gml</script>
     <script>scripts\turretShoot.gml</script>
+    <script>scripts\roomTransition.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fHud</font>
@@ -95,10 +98,14 @@
     <object>objects\oGrab</object>
     <object>objects\oWater</object>
     <object>objects\oHiddenPlace</object>
+    <object>objects\oDoor</object>
+    <object>objects\oRoomChanger</object>
+    <object>objects\oTransition</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room3</room>
-    <room>rooms\Map</room>
+    <room>rooms\room4</room>
+    <room>rooms\Map_new</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
