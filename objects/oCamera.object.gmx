@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -26,15 +26,15 @@
           <argument>
             <kind>1</kind>
             <string>/// Initialize Camera Variables
-xDistance = 0;
-yDistance = 0;
+path = path_add();
 
 inHiddenArea = false;
+pointDistance = 512;
+xPoint = 0;
+yPoint = 0;
 
-xTo = x + xDistance;
-yTo = y - yDistance;
-
-SPEED = 2;
+xTo = 0;
+yTo = 0;
 </string>
           </argument>
         </arguments>
@@ -57,13 +57,90 @@ SPEED = 2;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (inHiddenArea)
-  inHiddenArea = place_meeting(x, y, oHiddenPlace);
-else
-  with (oPlayer)
-    other.inHiddenArea = place_meeting(x, y, oHiddenPlace);
+            <string>if (!instance_exists(oPlayer))
+  exit;
 
-cameraPositioning();
+var xTo, yTo;
+
+if (inHiddenArea)
+  inHiddenArea = place_meeting(x, y, oHiddenPlace);
+else{
+  with (oPlayer){
+    other.inHiddenArea = place_meeting(x, y, oHiddenPlace);
+  }
+}
+
+xPoint = oPlayer.x + (oPlayer.facing * pointDistance);
+yPoint = oPlayer.y;
+
+move_towards_point(xPoint, yPoint, 0);
+xTo = oPlayer.x + lengthdir_x(min(96, distance_to_point(xPoint, yPoint)), direction);
+yTo = oPlayer.y + lengthdir_y(min(96, distance_to_point(xPoint, yPoint)), direction);
+
+xSpeed = (xTo-x)/2;
+ySpeed = (yTo-y)/2;
+
+xSpeed = round(xSpeed);
+ySpeed = round(ySpeed);
+
+var xTemp = x;
+var yTemp = y;
+
+repeat (abs(xSpeed)){
+  if (place_meeting(xTemp+sign(xSpeed), y, oHiddenPlace) &amp;&amp; !inHiddenArea){
+    xSpeed = 0;
+    x = xTemp;
+  }else
+    xTemp += sign(xSpeed);
+}
+
+repeat (abs(ySpeed)){
+  if (place_meeting(x, yTemp+sign(ySpeed), oHiddenPlace) &amp;&amp; !inHiddenArea){
+    ySpeed = 0;
+    y = yTemp;
+  }else
+    yTemp += sign(ySpeed);
+}
+
+x += xSpeed;
+y += ySpeed;
+
+view_xview = -(view_wview/2) + x;
+view_yview = -(view_hview/2) + y;
+
+view_xview = clamp(view_xview, 0, room_width - view_wview);
+view_yview = clamp(view_yview, 0, room_height - view_hview);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//draw_set_colour($0000FF);
+//draw_circle(xPoint, yPoint, 5, false);
+
+//draw_set_colour($00FF00);
+//if (!is_undefined(xTo) &amp;&amp; !is_undefined(yTo))
+//  draw_circle(xTo, yTo, 5, false);
+
+draw_set_colour($FF0000);
+draw_circle(x, y, 5, false);
 </string>
           </argument>
         </arguments>
