@@ -1,7 +1,7 @@
 /// drawMap(xTileRoom, yTileRoom, xDraw, yDraw);
 var map = argument0;
-var xTileRoom = argument1;
-var yTileRoom = argument2;
+var xTileRoom = argument1 + global.mapRoomX;
+var yTileRoom = argument2 + global.mapRoomY;
 var xDraw = argument3;
 var yDraw = argument4;
 

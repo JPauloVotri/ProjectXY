@@ -83,7 +83,7 @@ if (horizontalTransition){
   timer = -width;
   maxTimer = stripeWidth;
   
-  for (var i = 0; i &lt; STRIPES; i++){
+  for (var i = 1; i &lt;= STRIPES; i++){
     stripeOne[i] = x - width;
     stripeTwo[i] = (x + stripeWidth) + width;
     length[i] = i * (stripeHeight / STRIPES);
@@ -95,11 +95,11 @@ if (horizontalTransition){
   timer = -width;
   maxTimer = stripeHeight;
   
-  for (var i = 0; i &lt; STRIPES; i++){
+  for (var i = 1; i &lt;= STRIPES; i++){
     stripeOne[i] = x - width;
     stripeTwo[i] = (x + stripeHeight) + width;
     length[i] = i * (stripeWidth / STRIPES);
-    stripeSpeed[i] = random_range(width / TIME, width / TIME + (TIME / 8));
+    stripeSpeed[i] = random_range(width / TIME, width / TIME + (TIME / 4));
   }
 }
 
@@ -129,7 +129,7 @@ anim = true;
             <kind>1</kind>
             <string>/// Verifica se a transição terminou
 if (anim){
-  for (var i = 0; i &lt; STRIPES; i++){
+  for (var i = 1; i &lt;= STRIPES; i++){
     stripeOne[i] += stripeSpeed[i];
     stripeTwo[i] -= stripeSpeed[i];
   }
@@ -142,11 +142,11 @@ if (anim){
     
     if (xTo != -1){
       oPlayer.x = xTo;
-      oCamera.x = xTo;
+      //oCamera.x = xTo;
     }
     if (yTo != -1){
       oPlayer.y = yTo;
-      oCamera.y = yTo;
+      //oCamera.y = yTo;
     }
   }
   
@@ -177,19 +177,19 @@ if (anim){
             <string>/// Desenha Transições
 if (horizontalTransition) {
   // Faixas horizontais
-  draw_set_color(c_black);
+  draw_set_color(c_purple);
   
   // Desenha as linhas de acordo com as arrays
-  for (var i = 0; i &lt; STRIPES; i++) {
+  for (var i = 1; i &lt;= STRIPES; i++) {
     draw_rectangle(stripeOne[i], length[i], stripeOne[i] + width, length[i] - height, false);
     draw_rectangle(stripeTwo[i], length[i], stripeTwo[i] - width, length[i] - height, false);
   }
 }else{
   // Vertical Stripes
-  draw_set_color(c_black);
+  draw_set_color(c_purple);
 
   // Desenha as linhas de acordo com as arrays
-  for (var i = 0; i &lt; STRIPES; i++) {
+  for (var i = 1; i &lt;= STRIPES; i++) {
     draw_rectangle(length[i], stripeOne[i], length[i] - height, stripeOne[i] + width, false);
     draw_rectangle(length[i], stripeTwo[i], length[i] - height, stripeTwo[i] - width, false);
   }
