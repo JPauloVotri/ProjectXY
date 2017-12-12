@@ -41,7 +41,6 @@
     <scripts name="Map">
       <script>scripts\loadMap.gml</script>
       <script>scripts\saveMap.gml</script>
-      <script>scripts\drawMap.gml</script>
       <script>scripts\scanMap.gml</script>
       <script>scripts\getTileLeft.gml</script>
       <script>scripts\getTileTop.gml</script>
@@ -57,11 +56,17 @@
         <script>scripts\getGravityForce.gml</script>
         <script>scripts\getHangingUpSpeed.gml</script>
       </scripts>
+      <scripts name="Gui">
+        <script>scripts\drawHud.gml</script>
+        <script>scripts\drawMap.gml</script>
+      </scripts>
+      <scripts name="Life">
+        <script>scripts\decreaseLife.gml</script>
+        <script>scripts\increaseLife.gml</script>
+        <script>scripts\takeDamage.gml</script>
+      </scripts>
       <script>scripts\cleanMove.gml</script>
       <script>scripts\instantiateShoot.gml</script>
-      <script>scripts\takeDamage.gml</script>
-      <script>scripts\decreaseLife.gml</script>
-      <script>scripts\increaseLife.gml</script>
     </scripts>
     <scripts name="States">
       <script>scripts\st_idle.gml</script>
@@ -70,7 +75,6 @@
       <script>scripts\st_hanging.gml</script>
     </scripts>
     <script>scripts\initKeys.gml</script>
-    <script>scripts\drawHud.gml</script>
     <script>scripts\healthBehaviour.gml</script>
     <script>scripts\turretShoot.gml</script>
     <script>scripts\roomTransition.gml</script>
@@ -102,11 +106,13 @@
     <object>objects\oDoor</object>
     <object>objects\oRoomChanger</object>
     <object>objects\oTransition</object>
+    <object>objects\oGameControl</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rInitializer</room>
+    <room>rooms\Map_new</room>
     <room>rooms\room3</room>
     <room>rooms\room4</room>
-    <room>rooms\Map_new</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

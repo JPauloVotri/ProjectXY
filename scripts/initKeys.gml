@@ -4,8 +4,9 @@ enum key{
   up = vk_up,
   down = vk_down,
   jump = ord("X"),
-  cheat = vk_insert,
   shoot = ord("Z"),
-
+  pause = vk_escape,
+  
+  cheat = vk_insert,
   damage = vk_delete
 }

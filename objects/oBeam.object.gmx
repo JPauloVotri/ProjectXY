@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>SPEED = 4;
+            <string>SPEED = 16;
 MAXLIFETIME = 1;
 
 lifeTime = 0;
@@ -52,7 +52,7 @@ lifeTime = 0;
           <argument>
             <kind>1</kind>
             <string>repeat (SPEED){
-  x += SPEED*image_xscale;
+  x += image_xscale;
 }
 
 lifeTime++;
