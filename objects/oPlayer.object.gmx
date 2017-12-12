@@ -332,7 +332,7 @@ if (keyboard_check_pressed(key.cheat)){
 draw_set_font(fDebug);
 draw_set_halign(fa_right);
 draw_set_valign(fa_top);
-draw_set_colour(c_black);
+draw_set_colour($FF0000);
 
 var top  = bbox_top;
 var side = 0;
@@ -351,6 +351,8 @@ if (!inHiddenArea)
 else
   inHiddenArea = place_meeting(cameraInstance.x, cameraInstance.y, oHiddenPlace);
 
+var nearestTurret = instance_nearest(x, y, oTurret);
+
 draw_text(view_wview[0]-10, 10,
           script_get_name(state)+
           "#dir: "+string(dir)+
@@ -363,7 +365,8 @@ draw_text(view_wview[0]-10, 10,
           "#extraLifesTotal: "+string(extraLifesTotal)+
           "#totalHP: "+string(hp + extraLifes*100)+
           "#global.gamePaused: "+string(global.gamePaused)+
-          "#global.inRoomTransition: "+string(global.inRoomTransition)/*+
+          "#global.inRoomTransition: "+string(global.inRoomTransition)+
+          "#distanceToNearestTurret: "+string(point_distance(nearestTurret.xHead, nearestTurret.yHead, x, y))/*+
           "#xCameraSpeedSign: "+string(cameraInstance.xSpeedSign)+
           "#yCameraSpeedSign: "+string(cameraInstance.ySpeedSign)*/);
 

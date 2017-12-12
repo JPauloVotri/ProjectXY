@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>SPEED = 16;
 MAXLIFETIME = 1;
+DAMAGE = 5;
 
 lifeTime = 0;
 </string>
@@ -63,6 +64,17 @@ if (lifeTime/60 &gt;= MAXLIFETIME)
 if (place_meeting(x, y, oDoor)){
   with (instance_place(x, y, oDoor))
     instance_destroy();
+  
+  instance_destroy();
+}
+
+if (place_meeting(x, y, oBlock))
+  instance_destroy();
+
+if (place_meeting(x, y, parEnemy)){
+  with (instance_place(x, y, parEnemy))
+    hp -= other.DAMAGE;
+  
   instance_destroy();
 }
 </string>

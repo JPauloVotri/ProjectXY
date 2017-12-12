@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>parEnemy</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (place_meeting(x-1, y, oBlock))
+            <string>/// Calcula direção do objeto
+if (place_meeting(x-1, y, oBlock))
   image_angle = 0;
 else if (place_meeting(x+1, y, oBlock))
   image_angle = 180;
@@ -33,7 +34,29 @@ else if (place_meeting(x, y-1, oBlock))
   image_angle = 270;
 else if (place_meeting(x, y+1, oBlock))
   image_angle = 90;
-
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Inicializa variáveis
+event_inherited();
+hp = 10;
 BULLETCOOLDOWNVALUE = 120;
 BULLETSPEED = 4;
 
@@ -64,13 +87,17 @@ bulletCooldown = 0;
 yHead = y+(14*-sin(degtorad(image_angle)));
 
 directionToPlayer = point_direction(xHead, yHead, oPlayer.x, oPlayer.y);
+distanceToPlayer = point_distance(xHead, yHead, oPlayer.x, oPlayer.y);
 
-if (bulletCooldown &gt;= BULLETCOOLDOWNVALUE){
+if (bulletCooldown &gt;= BULLETCOOLDOWNVALUE &amp;&amp; !collision_line(xHead, yHead, oPlayer.x, oPlayer.y, oBlock, true, true) &amp;&amp; distanceToPlayer &lt;= 512){
   turretShoot(xHead, yHead, directionToPlayer, BULLETSPEED);
   bulletCooldown = 0;
 }
 
 bulletCooldown++;
+
+if (hp &lt;= 0)
+  instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -94,7 +121,10 @@ bulletCooldown++;
           <argument>
             <kind>1</kind>
             <string>draw_sprite_ext(sTurretBody, 0, x, y, 1, 1, image_angle, -1, 255);
-draw_sprite_ext(sTurretHead, 0, xHead, yHead, 1, 1, directionToPlayer, -1, 255);
+if (collision_line(xHead, yHead, oPlayer.x, oPlayer.y, oBlock, true, true) || distanceToPlayer &gt; 512)
+  draw_sprite_ext(sTurretHead, 0, xHead, yHead, 1, 1, image_angle, -1, 255);
+else
+  draw_sprite_ext(sTurretHead, 0, xHead, yHead, 1, 1, directionToPlayer, -1, 255);
 </string>
           </argument>
         </arguments>

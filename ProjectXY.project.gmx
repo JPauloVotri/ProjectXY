@@ -94,6 +94,7 @@
     <objects name="Enemies">
       <object>objects\oTurret</object>
       <object>objects\oTurretBullet</object>
+      <object>objects\parEnemy</object>
     </objects>
     <objects name="Player">
       <object>objects\oPlayer</object>
