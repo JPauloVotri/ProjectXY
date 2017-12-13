@@ -5,8 +5,8 @@ draw_set_colour($000000);
 draw_rectangle(0, 0, display_get_gui_width(), display_get_gui_height(), false);
 
 // Variáveis do mapa
-var xTileRoom = floor((view_xview + view_wview/2) / view_wview);
-var yTileRoom = floor((view_yview + view_hview/2) / view_hview);
+var xTileRoom = floor((view_xview + view_wview/2) / view_wview) + mapShiftH;
+var yTileRoom = floor((view_yview + view_hview/2) / view_hview) + mapShiftV;
 
 // Desenha o mapa
 drawMap(xTileRoom, yTileRoom, XMAP, YMAP, MAPRADIUS);

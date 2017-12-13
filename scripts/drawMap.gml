@@ -20,8 +20,8 @@ var tileTop;
 var tileXDraw;
 var tileYDraw;
 
-var playerTileX = 0;
-var playerTileY = 0;
+var playerTileX = -1;
+var playerTileY = -1;
 
 if (global.mapPositionTick >= 60)
   global.mapPositionTick = 0;
@@ -57,5 +57,5 @@ for (var i = 0; i <= diameter; i++){
   }
 }
 
-if (!is_undefined(playerTileX) && !is_undefined(playerTileY))
+if (playerTileX != -1 && playerTileY != -1)
   draw_sprite(sMapLocation, floor(global.mapPositionTick/30), playerTileX, playerTileY);

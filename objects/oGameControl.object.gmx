@@ -66,8 +66,7 @@ if (global.gamePaused)
 else
   instance_activate_all();
 
-//--- Tempo da sprite de posição no mapa ---
-global.mapPositionTick++;
+pauseMenuMapBehaviour();
 </string>
           </argument>
         </arguments>

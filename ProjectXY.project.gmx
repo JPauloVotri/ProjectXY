@@ -83,6 +83,7 @@
     <script>scripts\roomTransition.gml</script>
     <script>scripts\drawPauseMenu.gml</script>
     <script>scripts\initializePauseMenuValues.gml</script>
+    <script>scripts\pauseMenuMapBehaviour.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fHud</font>

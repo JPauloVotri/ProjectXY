@@ -6,6 +6,7 @@ PAUSETEXTY = 25;
 MAPRADIUS = 13;
 XMAP = round(display_get_gui_width()/2 - (MAPRADIUS * 32) - 16);
 YMAP = round(display_get_gui_height() * (13/24) - (MAPRADIUS * 18) - 9);
+MAPSHIFTCOOLDOWN = 5;
 
 BUTTONW = (display_get_gui_width()/3)-1;
 BUTTONH = 48;
@@ -27,3 +28,7 @@ EXITBUTTONY = 0;
 EXITTEXTX = display_get_gui_width() * (5/6);
 EXITTEXTY = 24;
 EXITTEXTCOLOUR = $990000;
+
+mapShiftH = 0;
+mapShiftV = 0;
+mapShiftTick = 0;
