@@ -48,7 +48,6 @@ hp = MAXHP;
 extraLifes = 0;
 extraLifesTotal = 0;
 shootCooldown = 0;
-mapPositionTick = 0;
 dir = 0;
 facing = 1;
 ySpeed = 0;
@@ -161,9 +160,6 @@ else if (dir == -1)
 //--- Tempo de tiro ---
 if (shootCooldown &lt; SHOOTCOOLDOWNVALUE)
   shootCooldown++;
-
-//--- Tempo da sprite de posição no mapa ---
-mapPositionTick++;
 </string>
           </argument>
         </arguments>

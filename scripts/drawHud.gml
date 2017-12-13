@@ -30,11 +30,7 @@ draw_set_colour($77C000);
 draw_text(XHP, YHP, hp);
 
 //--- Map ---
-if (mapPositionTick >= 60)
-  mapPositionTick = 0;
-
 draw_set_colour($000000);
 draw_roundrect(XMAP-6, YMAP-6, XMAP+32*5+5, YMAP+18*5+5, false);
 
 drawMap(floor(x/view_wview), floor(y/view_hview), 28, 20);
-draw_sprite(sMapLocation, floor(mapPositionTick/30), XMAP+64, YMAP+36);

@@ -14,24 +14,27 @@ var mapEntrance = ds_map_find_value(global.map, "mapEntrance");
 var mapNormal = ds_map_find_value(global.map, "mapNormal");
 var mapSpecial = ds_map_find_value(global.map, "mapSpecial");
 
-/*if (entireMap){
-  var maxTileRight = ds_map_find_value(map, "maxTileRight");
-  var maxTileBottom = ds_map_find_value(map, "maxTileBottom");
-}else{
-  var maxTileRight = 4;
-  var maxTileBottom = 4;
-}*/
-
 var tileLeft;
 var tileTop;
 
 var tileXDraw;
 var tileYDraw;
 
+var playerTileX;
+var playerTileY;
+
+if (global.mapPositionTick >= 60)
+  global.mapPositionTick = 0;
+
 for (var i = 0; i <= diameter; i++){
   for (var j = 0; j <= diameter; j++){
     tileXDraw = 32*i + xDraw;
     tileYDraw = 18*j + yDraw;
+    
+    if (i+xTileRoom-radius == floor((view_xview + view_wview / 2) / view_wview))
+      playerTileX = tileXDraw;
+    if (j+yTileRoom-radius == floor((view_yview + view_hview / 2) / view_hview))
+      playerTileY = tileYDraw;
     
     /*
     tileLeft = ds_map_find_value(mapSpecial, string(i+xTileRoom-2)+"-"+string(j+yTileRoom-2)+"x");
@@ -53,3 +56,6 @@ for (var i = 0; i <= diameter; i++){
       draw_background_part(bgEntrancesMapTileset, tileLeft, tileTop, 32, 18, tileXDraw, tileYDraw);
   }
 }
+
+if (!is_undefined(playerTileX) && !is_undefined(playerTileY))
+  draw_sprite(sMapLocation, floor(global.mapPositionTick/30), playerTileX, playerTileY);

@@ -28,6 +28,9 @@
             <string>global.gamePaused = false;
 global.inRoomTransition = false;
 global.map = loadMap();
+global.mapPositionTick = 0;
+
+initializePauseMenuValues();
 
 initKeys();
 </string>
@@ -62,6 +65,9 @@ if (global.gamePaused)
   instance_deactivate_all(true);
 else
   instance_activate_all();
+
+//--- Tempo da sprite de posição no mapa ---
+global.mapPositionTick++;
 </string>
           </argument>
         </arguments>
@@ -85,13 +91,7 @@ else
           <argument>
             <kind>1</kind>
             <string>if (global.gamePaused &amp;&amp; !global.inRoomTransition){
-  draw_set_colour(c_black);
-  draw_set_font(fHud);
-  draw_set_valign(fa_middle);
-  draw_set_halign(fa_center);
-  draw_text(display_get_gui_width()/2, display_get_gui_height()/16, "GAME PAUSED");
-  
-  drawMap(floor((view_xview + view_wview/2) / view_wview), floor((view_yview + view_hview/2) / view_hview), (display_get_gui_width()/2) - 10*32 - 16, (display_get_gui_height()/2) - 10*18 - 9, 10);
+  drawPauseMenu();
 }
 </string>
           </argument>

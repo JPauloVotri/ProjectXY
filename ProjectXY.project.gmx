@@ -38,6 +38,10 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
+    <scripts name="Config">
+      <script>scripts\initKeys.gml</script>
+      <script>scripts\setResolution.gml</script>
+    </scripts>
     <scripts name="Map">
       <script>scripts\loadMap.gml</script>
       <script>scripts\saveMap.gml</script>
@@ -61,6 +65,7 @@
         <script>scripts\drawMap.gml</script>
       </scripts>
       <scripts name="Life">
+        <script>scripts\healthBehaviour.gml</script>
         <script>scripts\decreaseLife.gml</script>
         <script>scripts\increaseLife.gml</script>
         <script>scripts\takeDamage.gml</script>
@@ -74,12 +79,10 @@
       <script>scripts\st_air.gml</script>
       <script>scripts\st_hanging.gml</script>
     </scripts>
-    <script>scripts\initKeys.gml</script>
-    <script>scripts\healthBehaviour.gml</script>
     <script>scripts\turretShoot.gml</script>
     <script>scripts\roomTransition.gml</script>
-    <script>scripts\initializeCameraGrid.gml</script>
-    <script>scripts\setResolution.gml</script>
+    <script>scripts\drawPauseMenu.gml</script>
+    <script>scripts\initializePauseMenuValues.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fHud</font>
