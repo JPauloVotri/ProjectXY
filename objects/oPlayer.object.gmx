@@ -361,8 +361,7 @@ draw_text(display_get_gui_width()-10, 10,
           "#extraLifesTotal: "+string(extraLifesTotal)+
           "#totalHP: "+string(hp + extraLifes*100)+
           "#global.gamePaused: "+string(global.gamePaused)+
-          "#global.inRoomTransition: "+string(global.inRoomTransition)+
-          "#distanceToNearestTurret: "+string(point_distance(nearestTurret.xHead, nearestTurret.yHead, x, y))/*+
+          "#global.inRoomTransition: "+string(global.inRoomTransition)/*+
           "#xCameraSpeedSign: "+string(cameraInstance.xSpeedSign)+
           "#yCameraSpeedSign: "+string(cameraInstance.ySpeedSign)*/);
 

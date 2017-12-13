@@ -20,8 +20,8 @@ var tileTop;
 var tileXDraw;
 var tileYDraw;
 
-var playerTileX;
-var playerTileY;
+var playerTileX = 0;
+var playerTileY = 0;
 
 if (global.mapPositionTick >= 60)
   global.mapPositionTick = 0;
@@ -31,9 +31,9 @@ for (var i = 0; i <= diameter; i++){
     tileXDraw = 32*i + xDraw;
     tileYDraw = 18*j + yDraw;
     
-    if (i+xTileRoom-radius == floor((view_xview + view_wview / 2) / view_wview))
+    if (i + xTileRoom - global.mapRoomX - radius == floor((view_xview + view_wview / 2) / view_wview))
       playerTileX = tileXDraw;
-    if (j+yTileRoom-radius == floor((view_yview + view_hview / 2) / view_hview))
+    if (j + yTileRoom - global.mapRoomY - radius == floor((view_yview + view_hview / 2) / view_hview))
       playerTileY = tileYDraw;
     
     /*
