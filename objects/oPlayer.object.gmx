@@ -353,7 +353,7 @@ else
 
 var nearestTurret = instance_nearest(x, y, oTurret);
 
-draw_text(view_wview[0]-10, 10,
+draw_text(display_get_gui_width()-10, 10,
           script_get_name(state)+
           "#dir: "+string(dir)+
           "#xSpeedSign: "+string(xSpeedSign)+

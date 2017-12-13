@@ -79,6 +79,7 @@
     <script>scripts\turretShoot.gml</script>
     <script>scripts\roomTransition.gml</script>
     <script>scripts\initializeCameraGrid.gml</script>
+    <script>scripts\setResolution.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fHud</font>

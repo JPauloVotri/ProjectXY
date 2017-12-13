@@ -62,10 +62,6 @@ if (global.gamePaused)
   instance_deactivate_all(true);
 else
   instance_activate_all();
-
-if (window_get_fullscreen()){
-  display_set_gui_size(1024, 576);
-}
 </string>
           </argument>
         </arguments>
@@ -93,9 +89,9 @@ if (window_get_fullscreen()){
   draw_set_font(fHud);
   draw_set_valign(fa_middle);
   draw_set_halign(fa_center);
-  draw_text(view_wview/2, view_hview/16, "GAME PAUSED");
+  draw_text(display_get_gui_width()/2, display_get_gui_height()/16, "GAME PAUSED");
   
-  drawMap(floor((view_xview + view_wview/2) / view_wview), floor((view_yview + view_hview/2) / view_hview), (view_wview/2) - 10*32 - 16, (view_hview/2) - 10*18 - 9, 10);
+  drawMap(floor((view_xview + view_wview/2) / view_wview), floor((view_yview + view_hview/2) / view_hview), (display_get_gui_width()/2) - 10*32 - 16, (display_get_gui_height()/2) - 10*18 - 9, 10);
 }
 </string>
           </argument>
@@ -121,10 +117,13 @@ if (window_get_fullscreen()){
             <kind>1</kind>
             <string>/// Set fullscreen
 
-if (window_get_fullscreen())
+if (window_get_fullscreen()){
   window_set_fullscreen(false);
-else
+  setResolution(1024, 576);
+}else{
   window_set_fullscreen(true);
+  setResolution(1280, 720);
+}
 </string>
           </argument>
         </arguments>
