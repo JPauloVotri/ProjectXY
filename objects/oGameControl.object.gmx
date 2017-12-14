@@ -67,6 +67,8 @@ else
   instance_activate_all();
 
 pauseMenuMapBehaviour();
+
+pauseMenuBehaviour();
 </string>
           </argument>
         </arguments>
