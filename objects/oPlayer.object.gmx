@@ -3,7 +3,7 @@
   <spriteName>sprite0</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>2</depth>
+  <depth>0</depth>
   <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -88,9 +88,11 @@ state = st_idle; // Variavel que ira gerenciar o estado atual do personagem
           <argument>
             <kind>1</kind>
             <string>/// Checa se jogo está pausado
-
-if (global.gamePaused)
+if (global.gamePaused){
+  xSpeed = 0;
+  ySpeed = 0;
   exit;
+}
 </string>
           </argument>
         </arguments>

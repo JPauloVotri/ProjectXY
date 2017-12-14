@@ -7,4 +7,4 @@ var spd = argument3;
 var bullet = instance_create(xPos, yPos, oTurretBullet);
 
 bullet.direction = dir;
-bullet.speed = spd;
+bullet.spd = spd;

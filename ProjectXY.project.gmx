@@ -61,6 +61,12 @@
         <script>scripts\getHangingUpSpeed.gml</script>
       </scripts>
       <scripts name="Gui">
+        <scripts name="Pause Menu">
+          <script>scripts\initializePauseMenuValues.gml</script>
+          <script>scripts\pauseMenuBehaviour.gml</script>
+          <script>scripts\pauseMenuMapBehaviour.gml</script>
+          <script>scripts\drawPauseMenu.gml</script>
+        </scripts>
         <script>scripts\drawHud.gml</script>
         <script>scripts\drawMap.gml</script>
       </scripts>
@@ -81,12 +87,6 @@
     </scripts>
     <script>scripts\turretShoot.gml</script>
     <script>scripts\roomTransition.gml</script>
-    <script>scripts\drawPauseMenu.gml</script>
-    <scripts name="Pause Menu">
-      <script>scripts\initializePauseMenuValues.gml</script>
-      <script>scripts\pauseMenuBehaviour.gml</script>
-      <script>scripts\pauseMenuMapBehaviour.gml</script>
-    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fHud</font>
@@ -119,7 +119,9 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rInitializer</room>
-    <room>rooms\Map_new</room>
+    <room>rooms\Map</room>
+    <room>rooms\room1</room>
+    <room>rooms\room2</room>
     <room>rooms\room3</room>
     <room>rooms\room4</room>
   </rooms>
