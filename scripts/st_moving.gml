@@ -8,10 +8,6 @@ if (!place_meeting(x, y+1, oBlock)){
   exit;
 }
 
-/*if (keyboard_check(key.right))
-  xSpeed = getSpeed();
-else if (keyboard_check(key.left))
-  xSpeed = -getSpeed();*/
 if (wantMove)
   xSpeed = getSpeed()*dir
 else{

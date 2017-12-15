@@ -6,6 +6,11 @@ enum key{
   jump = ord("X"),
   shoot = ord("Z"),
   pause = vk_escape,
+  aim = vk_lshift,
+  aimUp = ord("W"),
+  aimDown = ord("S"),
+  aimLeft = ord("A"),
+  aimRight = ord("D"),
   
   cheat = vk_insert,
   damage = vk_delete

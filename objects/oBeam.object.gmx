@@ -76,7 +76,8 @@ if (global.gamePaused)
           <argument>
             <kind>1</kind>
             <string>repeat (SPEED){
-  x += image_xscale;
+  x += dcos(direction);
+  y -= dsin(direction);
 }
 
 lifeTime++;

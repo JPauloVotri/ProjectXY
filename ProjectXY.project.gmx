@@ -29,6 +29,7 @@
     <sprite>sprites\sMapLocation</sprite>
     <sprite>sprites\sDoor</sprite>
     <sprite>sprites\sRoomChanger</sprite>
+    <sprite>sprites\sAimRay</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tile_test</background>
@@ -49,7 +50,11 @@
       <script>scripts\getTileLeft.gml</script>
       <script>scripts\getTileTop.gml</script>
     </scripts>
-    <scripts name="PlayerScripts">
+    <scripts name="Player">
+      <scripts name="Beam">
+        <script>scripts\aimBehaviour.gml</script>
+        <script>scripts\instantiateShoot.gml</script>
+      </scripts>
       <scripts name="Camera">
         <script>scripts\cameraPositioning.gml</script>
         <script>scripts\initializeCamera.gml</script>
@@ -76,14 +81,13 @@
         <script>scripts\increaseLife.gml</script>
         <script>scripts\takeDamage.gml</script>
       </scripts>
+      <scripts name="States">
+        <script>scripts\st_idle.gml</script>
+        <script>scripts\st_moving.gml</script>
+        <script>scripts\st_air.gml</script>
+        <script>scripts\st_hanging.gml</script>
+      </scripts>
       <script>scripts\cleanMove.gml</script>
-      <script>scripts\instantiateShoot.gml</script>
-    </scripts>
-    <scripts name="States">
-      <script>scripts\st_idle.gml</script>
-      <script>scripts\st_moving.gml</script>
-      <script>scripts\st_air.gml</script>
-      <script>scripts\st_hanging.gml</script>
     </scripts>
     <script>scripts\turretShoot.gml</script>
     <script>scripts\roomTransition.gml</script>

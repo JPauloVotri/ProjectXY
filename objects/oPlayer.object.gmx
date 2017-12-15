@@ -44,6 +44,7 @@ YHP = 40;
 XXLIFES = 240;
 YXLIFES = 20;
 
+aimAngle = 0;
 hp = MAXHP;
 extraLifes = 0;
 extraLifesTotal = 0;
@@ -55,10 +56,12 @@ xSpeed = 0;
 xSpeedSign = 0;
 grav = 0;
 
+isAiming = false;
 isGrounded = false;
 inWater = false;
 hangingUp = false;
 wantMove = false;
+wantAim = false;
 
 
 state = st_idle; // Variavel que ira gerenciar o estado atual do personagem
@@ -113,12 +116,7 @@ if (global.gamePaused){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Verificação de direção do personagem
-
-/*
-Verifica teclas precionadas e posições de bounding box
-(extremidades da máscara de colisão);
-*/
+            <string>/// Verificação de ação do personagem
 
 //--- Teclas de movimento e direção ---
 dir = keyboard_check(key.right) - keyboard_check(key.left);
@@ -127,7 +125,9 @@ wantMove = abs(dir);
 if (wantMove)
   facing = dir;
 
-isGrounded = place_meeting(x, y+1, oBlock);
+image_xscale = facing;
+
+//isGrounded = place_meeting(x, y+1, oBlock);
 
 //--- Variáveis de Bounding Box ---
 bbTop  = bbox_top;
@@ -187,9 +187,12 @@ if (shootCooldown &lt; SHOOTCOOLDOWNVALUE)
 //--- Executa script do estado atual ---
 script_execute(state);
 
+//--- Executa script da mira ---
+aimBehaviour();
+
 //--- Executa script de tiro
 if (keyboard_check_pressed(key.shoot) &amp;&amp; shootCooldown &gt;= SHOOTCOOLDOWNVALUE){
-  instantiateShoot(facing);
+  instantiateShoot(aimAngle);
   shootCooldown = 0;
 }
 
@@ -363,10 +366,39 @@ draw_text(display_get_gui_width()-10, 10,
           "#extraLifesTotal: "+string(extraLifesTotal)+
           "#totalHP: "+string(hp + extraLifes*100)+
           "#global.gamePaused: "+string(global.gamePaused)+
-          "#global.inRoomTransition: "+string(global.inRoomTransition)/*+
+          "#global.inRoomTransition: "+string(global.inRoomTransition)+
+          "#aimAngle: "+string(aimAngle)+
+          "#wantAim: "+string(wantAim)+
+          "#isAiming: "+string(isAiming)/*+
           "#xCameraSpeedSign: "+string(cameraInstance.xSpeedSign)+
           "#yCameraSpeedSign: "+string(cameraInstance.ySpeedSign)*/);
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_self();
+
+if (isAiming)
+  draw_sprite_ext(sAimRay, 0, x, y, 1, 1, aimAngle, c_white, 255);
 </string>
           </argument>
         </arguments>
