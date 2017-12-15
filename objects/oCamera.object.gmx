@@ -26,9 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>/// Initialize Camera Variables
-path = path_add();
-
-inHiddenArea = false;
+inHiddenPlace = false;
 pointDistance = 512;
 xPoint = 0;
 yPoint = 0;
@@ -58,6 +56,26 @@ yTo = 0;
           <argument>
             <kind>1</kind>
             <string>if (!instance_exists(oPlayer))
+  exit;
+
+if (inHiddenPlace)
+  inHiddenPlace = place_meeting(x, y, oHiddenPlace);
+else{
+  inHiddenPlace = oPlayer.inHiddenPlace;
+}
+
+checkCameraPositionLimits();
+
+view_xview = oPlayer.x - view_wview/2;
+view_yview = oPlayer.y - view_hview/2;
+
+view_xview = clamp(view_xview, borderLeft, borderRight - view_wview);
+view_yview = clamp(view_yview, borderUp, borderDown - view_hview);
+
+x = view_xview + view_wview/2;
+y = view_yview + view_hview/2;
+
+/*if (!instance_exists(oPlayer))
   exit;
 
 var xTo, yTo;
@@ -109,38 +127,7 @@ view_xview = -(view_wview/2) + x;
 view_yview = -(view_hview/2) + y;
 
 view_xview = clamp(view_xview, 0, room_width - view_wview);
-view_yview = clamp(view_yview, 0, room_height - view_hview);
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>//draw_set_colour($0000FF);
-//draw_circle(xPoint, yPoint, 5, false);
-
-//draw_set_colour($00FF00);
-//if (!is_undefined(xTo) &amp;&amp; !is_undefined(yTo))
-//  draw_circle(xTo, yTo, 5, false);
-
-draw_set_colour($FF0000);
-draw_circle(x, y, 5, false);
+view_yview = clamp(view_yview, 0, room_height - view_hview);*/
 </string>
           </argument>
         </arguments>

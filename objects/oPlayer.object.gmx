@@ -58,6 +58,7 @@ grav = 0;
 
 isAiming = false;
 isGrounded = false;
+inHiddenPlace = false;
 inWater = false;
 hangingUp = false;
 wantMove = false;
@@ -66,7 +67,7 @@ wantAim = false;
 
 state = st_idle; // Variavel que ira gerenciar o estado atual do personagem
 
-//instance_create(x, y, oCamera);
+instance_create(x, y, oCamera);
 //cameraInstance = initializeCamera();
 </string>
           </argument>
@@ -127,7 +128,8 @@ if (wantMove)
 
 image_xscale = facing;
 
-//isGrounded = place_meeting(x, y+1, oBlock);
+//--- Verifica local escondido ---
+inHiddenPlace = place_meeting(x, y, oHiddenPlace);
 
 //--- Variáveis de Bounding Box ---
 bbTop  = bbox_top;
@@ -359,7 +361,6 @@ draw_text(display_get_gui_width()-10, 10,
           "#dir: "+string(dir)+
           "#xSpeedSign: "+string(xSpeedSign)+
           "#ySpeedSign: "+string(ySpeedSign)+
-          //"#inHiddenArea: "+string(cameraInstance.inHiddenArea)+
           "#facing: "+string(facing)+
           "#shootCooldown: "+string(shootCooldown)+
           "#extraLifes: "+string(extraLifes)+

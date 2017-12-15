@@ -28,6 +28,7 @@
     <sprite>sprites\sGrab</sprite>
     <sprite>sprites\sWater</sprite>
     <sprite>sprites\sHiddenPlace</sprite>
+    <sprite>sprites\sEmptyPlace</sprite>
     <sprite>sprites\sMapLocation</sprite>
     <sprite>sprites\sDoor</sprite>
     <sprite>sprites\sRoomChanger</sprite>
@@ -58,8 +59,8 @@
         <script>scripts\instantiateShoot.gml</script>
       </scripts>
       <scripts name="Camera">
+        <script>scripts\checkCameraPositionLimits.gml</script>
         <script>scripts\cameraPositioning.gml</script>
-        <script>scripts\initializeCamera.gml</script>
       </scripts>
       <scripts name="Getters">
         <script>scripts\getSpeed.gml</script>
@@ -120,6 +121,7 @@
     </objects>
     <object>objects\oGrab</object>
     <object>objects\oWater</object>
+    <object>objects\oEmptyPlace</object>
     <object>objects\oHiddenPlace</object>
     <object>objects\oRoomChanger</object>
     <object>objects\oTransition</object>
