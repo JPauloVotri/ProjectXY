@@ -201,7 +201,7 @@ if (anim){
             <string>/// Desenha Transições
 if (horizontalTransition) {
   // Faixas horizontais
-  draw_set_color(c_purple);
+  draw_set_color(c_black);
   
   // Desenha as linhas de acordo com as arrays
   for (var i = 1; i &lt;= STRIPES; i++) {
@@ -210,7 +210,7 @@ if (horizontalTransition) {
   }
 }else{
   // Vertical Stripes
-  draw_set_color(c_purple);
+  draw_set_color(c_black);
 
   // Desenha as linhas de acordo com as arrays
   for (var i = 1; i &lt;= STRIPES; i++) {

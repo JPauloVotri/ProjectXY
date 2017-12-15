@@ -102,10 +102,11 @@
     <objects name="Blocks">
       <object>objects\oBlock</object>
       <object>objects\oHalfBlock</object>
-      <object>objects\oIce</object>
       <object>objects\oSmallSlope</object>
       <object>objects\oMediumSlope</object>
       <object>objects\oLargeSlope</object>
+      <object>objects\oIce</object>
+      <object>objects\oDoor</object>
     </objects>
     <objects name="Enemies">
       <object>objects\oTurret</object>
@@ -120,7 +121,6 @@
     <object>objects\oGrab</object>
     <object>objects\oWater</object>
     <object>objects\oHiddenPlace</object>
-    <object>objects\oDoor</object>
     <object>objects\oRoomChanger</object>
     <object>objects\oTransition</object>
     <object>objects\oGameControl</object>

@@ -130,7 +130,7 @@ global.mapRoomY = 1;</code>
     <instance objName="oIce" x="2496" y="2240" name="inst_0AF85BC0" locked="0" code="" scaleX="6" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="64" y="0" name="inst_B2E6D550" locked="0" code="" scaleX="5" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="640" y="0" name="inst_30B927DC" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oRoomChanger" x="384" y="0" name="inst_962AB26E" locked="0" code="nextRoom = room4;&#xA;horizontalTransition = false;&#xA;xTo = 672;&#xA;yTo = 448;&#xA;" scaleX="8" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oRoomChanger" x="384" y="0" name="inst_962AB26E" locked="0" code="nextRoom = room4;&#xA;horizontalTransition = false;&#xA;xTo = 512;&#xA;yTo = 448;&#xA;" scaleX="8" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oHalfBlock" x="64" y="64" name="inst_B3B02B88" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oHiddenPlace" x="3072" y="1152" name="inst_AACB7309" locked="0" code="" scaleX="16" scaleY="18" colour="4294967295" rotation="0"/>
     <instance objName="oLargeSlope" x="640" y="448" name="inst_B6D8CF78" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -142,6 +142,8 @@ global.mapRoomY = 1;</code>
     <instance objName="oBlock" x="64" y="384" name="inst_9A9ACE36" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="64" y="448" name="inst_E0C00C29" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oMediumSlope" x="832" y="384" name="inst_84DCF286" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oDoor" x="640" y="32" name="inst_7487BE3A" locked="0" code="" scaleX="1" scaleY="1.33000004291534" colour="4294967295" rotation="270"/>
+    <instance objName="oBlock" x="384" y="256" name="inst_7DEF37C7" locked="0" code="" scaleX="4" scaleY="0.5" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -67,7 +67,8 @@ global.mapRoomY = 1;</code>
     <instance objName="oBlock" x="64" y="960" name="inst_CF857D35" locked="0" code="" scaleX="5" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="640" y="640" name="inst_23B84332" locked="0" code="" scaleX="5" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="64" y="320" name="inst_BB1D5160" locked="0" code="" scaleX="9" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oRoomChanger" x="384" y="0" name="inst_F7AAF514" locked="0" code="nextRoom = room4;&#xA;horizontalTransition = false;&#xA;xTo = 4448;&#xA;yTo = 448;&#xA;" scaleX="8" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oRoomChanger" x="384" y="0" name="inst_F7AAF514" locked="0" code="nextRoom = room4;&#xA;horizontalTransition = false;&#xA;xTo = 4608;&#xA;yTo = 448;&#xA;" scaleX="8" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oDoor" x="640" y="32" name="inst_80D585ED" locked="0" code="" scaleX="1" scaleY="1.33000004291534" colour="4294967295" rotation="270"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
