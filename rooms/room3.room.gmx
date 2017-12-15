@@ -55,7 +55,7 @@ global.mapRoomY = 1;</code>
     <instance objName="oBlock" x="960" y="0" name="inst_E0A3D583" locked="0" code="" scaleX="1" scaleY="35" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="0" y="2240" name="inst_40D02C7C" locked="0" code="" scaleX="16" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="0" y="2176" name="inst_25C32D04" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oSlope" x="128" y="2176" name="inst_7723DB14" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oSmallSlope" x="128" y="2176" name="inst_7723DB14" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="0" y="0" name="inst_1C66DEC4" locked="0" code="" scaleX="1" scaleY="31" colour="4294967295" rotation="0"/>
     <instance objName="oRoomChanger" x="0" y="1984" name="inst_9BC761AF" locked="0" code="nextRoom = room2;&#xA;horizontalTransition = true;&#xA;xTo = 928;&#xA;yTo = 384;" scaleX="1" scaleY="6" colour="4294967295" rotation="0"/>
     <instance objName="oDoor" x="32" y="1984" name="inst_CA8B4281" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

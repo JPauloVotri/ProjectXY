@@ -8,7 +8,7 @@
   <sepmasks>-1</sepmasks>
   <bboxmode>0</bboxmode>
   <bbox_left>0</bbox_left>
-  <bbox_right>63</bbox_right>
+  <bbox_right>127</bbox_right>
   <bbox_top>0</bbox_top>
   <bbox_bottom>63</bbox_bottom>
   <HTile>0</HTile>
@@ -17,10 +17,10 @@
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>64</width>
+  <width>128</width>
   <height>64</height>
   <frames>
-    <frame index="0">images\sSlope_0.png</frame>
-    <frame index="1">images\sSlope_1.png</frame>
+    <frame index="0">images\sMediumSlope_0.png</frame>
+    <frame index="1">images\sMediumSlope_1.png</frame>
   </frames>
 </sprite>

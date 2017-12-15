@@ -10,7 +10,9 @@
       <sprite>sprites\sBlock</sprite>
       <sprite>sprites\sHalfBlock</sprite>
       <sprite>sprites\sIce</sprite>
-      <sprite>sprites\sSlope</sprite>
+      <sprite>sprites\sSmallSlope</sprite>
+      <sprite>sprites\sMediumSlope</sprite>
+      <sprite>sprites\sLargeSlope</sprite>
     </sprites>
     <sprites name="Enemies">
       <sprite>sprites\sTurretBody</sprite>
@@ -101,7 +103,9 @@
       <object>objects\oBlock</object>
       <object>objects\oHalfBlock</object>
       <object>objects\oIce</object>
-      <object>objects\oSlope</object>
+      <object>objects\oSmallSlope</object>
+      <object>objects\oMediumSlope</object>
+      <object>objects\oLargeSlope</object>
     </objects>
     <objects name="Enemies">
       <object>objects\oTurret</object>

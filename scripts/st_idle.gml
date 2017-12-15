@@ -13,7 +13,7 @@ if (place_meeting(x, y+1, oIce)){
 if (wantMove){
   state = st_moving;
   exit;
-}else if (keyboard_check_pressed(key.jump) && !place_free(x,y+1)){
+}else if (keyboard_check_pressed(key.jump) && place_meeting(x, y+1, oBlock)){
   ySpeed = -getJumpForce();
   xSpeedSign = 0;
   state = st_air;
