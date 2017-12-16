@@ -25,7 +25,6 @@
       <sprite>sprites\sBeam</sprite>
       <sprite>sprites\sCamera</sprite>
     </sprites>
-    <sprite>sprites\sGrab</sprite>
     <sprite>sprites\sWater</sprite>
     <sprite>sprites\sHiddenPlace</sprite>
     <sprite>sprites\sEmptyPlace</sprite>
@@ -39,6 +38,7 @@
     <background>background\bRoomTest</background>
     <background>background\bgNormalMapTileset</background>
     <background>background\bgEntrancesMapTileset</background>
+    <background>background\bgHiddenLevelTileset</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -119,7 +119,6 @@
       <object>objects\oBeam</object>
       <object>objects\oCamera</object>
     </objects>
-    <object>objects\oGrab</object>
     <object>objects\oWater</object>
     <object>objects\oEmptyPlace</object>
     <object>objects\oHiddenPlace</object>

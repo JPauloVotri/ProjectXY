@@ -6,7 +6,7 @@
   <vsnap>18</vsnap>
   <hsnap>32</hsnap>
   <isometric>0</isometric>
-  <speed>30</speed>
+  <speed>60</speed>
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>0</showcolour>
@@ -45,41 +45,62 @@ room_goto_next();</code>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
   </backgrounds>
   <views>
-    <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
-    <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
-    <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
-    <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
-    <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
-    <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
-    <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
-    <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
+    <view visible="0" objName="" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
+    <view visible="0" objName="" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
+    <view visible="0" objName="" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
+    <view visible="0" objName="" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
+    <view visible="0" objName="" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
+    <view visible="0" objName="" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
+    <view visible="0" objName="" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
+    <view visible="0" objName="" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances/>
   <tiles>
-    <tile bgName="bgNormalMapTileset" x="0" y="0" w="32" h="18" xo="66" yo="38" id="1" name="tile_1" depth="2" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bgNormalMapTileset" x="32" y="0" w="32" h="18" xo="165" yo="38" id="2" name="tile_2" depth="2" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bgNormalMapTileset" x="64" y="0" w="32" h="18" xo="165" yo="38" id="3" name="tile_3" depth="2" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bgNormalMapTileset" x="96" y="0" w="32" h="18" xo="165" yo="38" id="4" name="tile_4" depth="2" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bgNormalMapTileset" x="128" y="0" w="32" h="18" xo="132" yo="38" id="5" name="tile_5" depth="2" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bgNormalMapTileset" x="0" y="18" w="32" h="18" xo="231" yo="38" id="6" name="tile_6" depth="2" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bgNormalMapTileset" x="32" y="18" w="32" h="18" xo="165" yo="19" id="7" name="tile_7" depth="2" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bgNormalMapTileset" x="64" y="18" w="32" h="18" xo="0" yo="38" id="8" name="tile_8" depth="2" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bgNormalMapTileset" x="128" y="18" w="32" h="18" xo="33" yo="38" id="9" name="tile_9" depth="2" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bgNormalMapTileset" x="32" y="36" w="32" h="18" xo="66" yo="19" id="10" name="tile_10" depth="2" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bgNormalMapTileset" x="64" y="36" w="32" h="18" xo="132" yo="19" id="11" name="tile_11" depth="2" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bgNormalMapTileset" x="96" y="36" w="32" h="18" xo="231" yo="76" id="12" name="tile_12" depth="2" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bgNormalMapTileset" x="128" y="36" w="32" h="18" xo="198" yo="38" id="13" name="tile_13" depth="2" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bgNormalMapTileset" x="32" y="54" w="32" h="18" xo="66" yo="19" id="14" name="tile_14" depth="2" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bgNormalMapTileset" x="64" y="54" w="32" h="18" xo="132" yo="19" id="15" name="tile_15" depth="2" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bgNormalMapTileset" x="128" y="54" w="32" h="18" xo="198" yo="38" id="16" name="tile_16" depth="2" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bgNormalMapTileset" x="0" y="72" w="32" h="18" xo="231" yo="76" id="17" name="tile_17" depth="2" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bgNormalMapTileset" x="32" y="72" w="32" h="18" xo="198" yo="19" id="18" name="tile_902B9538" depth="2" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bgNormalMapTileset" x="64" y="72" w="32" h="18" xo="231" yo="19" id="19" name="tile_1550B8ED" depth="2" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bgNormalMapTileset" x="96" y="72" w="32" h="18" xo="231" yo="38" id="20" name="tile_F8DB5840" depth="2" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bgNormalMapTileset" x="128" y="72" w="32" h="18" xo="99" yo="38" id="21" name="tile_711C887B" depth="2" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bgEntrancesMapTileset" x="0" y="18" w="32" h="18" xo="33" yo="0" id="22" name="tile_3BB05328" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bgEntrancesMapTileset" x="96" y="36" w="32" h="18" xo="99" yo="38" id="23" name="tile_886D1585" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="bgEntrancesMapTileset" x="0" y="72" w="32" h="18" xo="33" yo="38" id="24" name="tile_10B60B28" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgNormalMapTileset" x="0" y="0" w="32" h="18" xo="66" yo="38" id="1" name="tile_1" depth="3" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgNormalMapTileset" x="32" y="0" w="32" h="18" xo="165" yo="38" id="2" name="tile_2" depth="3" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgNormalMapTileset" x="64" y="0" w="32" h="18" xo="165" yo="38" id="3" name="tile_3" depth="3" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgNormalMapTileset" x="96" y="0" w="32" h="18" xo="165" yo="38" id="4" name="tile_4" depth="3" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgNormalMapTileset" x="128" y="0" w="32" h="18" xo="132" yo="38" id="5" name="tile_5" depth="3" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgNormalMapTileset" x="0" y="18" w="32" h="18" xo="231" yo="38" id="6" name="tile_6" depth="3" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgNormalMapTileset" x="32" y="18" w="32" h="18" xo="165" yo="19" id="7" name="tile_7" depth="3" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgNormalMapTileset" x="64" y="18" w="32" h="18" xo="0" yo="38" id="8" name="tile_8" depth="3" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgNormalMapTileset" x="128" y="18" w="32" h="18" xo="33" yo="38" id="9" name="tile_9" depth="3" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgNormalMapTileset" x="32" y="36" w="32" h="18" xo="66" yo="19" id="10" name="tile_10" depth="3" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgNormalMapTileset" x="64" y="36" w="32" h="18" xo="132" yo="19" id="11" name="tile_11" depth="3" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgNormalMapTileset" x="96" y="36" w="32" h="18" xo="231" yo="38" id="12" name="tile_12" depth="3" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgNormalMapTileset" x="128" y="36" w="32" h="18" xo="198" yo="38" id="13" name="tile_13" depth="3" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgNormalMapTileset" x="32" y="54" w="32" h="18" xo="66" yo="19" id="14" name="tile_14" depth="3" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgNormalMapTileset" x="64" y="54" w="32" h="18" xo="132" yo="19" id="15" name="tile_15" depth="3" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgNormalMapTileset" x="128" y="54" w="32" h="18" xo="198" yo="38" id="16" name="tile_16" depth="3" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgNormalMapTileset" x="0" y="72" w="32" h="18" xo="231" yo="38" id="17" name="tile_17" depth="3" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgNormalMapTileset" x="32" y="72" w="32" h="18" xo="198" yo="19" id="18" name="tile_18" depth="3" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgNormalMapTileset" x="64" y="72" w="32" h="18" xo="231" yo="19" id="19" name="tile_19" depth="3" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgNormalMapTileset" x="96" y="72" w="32" h="18" xo="231" yo="38" id="20" name="tile_20" depth="3" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgNormalMapTileset" x="128" y="72" w="32" h="18" xo="99" yo="38" id="21" name="tile_21" depth="3" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgEntrancesMapTileset" x="0" y="18" w="32" h="18" xo="33" yo="0" id="22" name="tile_22" depth="2" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgEntrancesMapTileset" x="96" y="36" w="32" h="18" xo="99" yo="0" id="23" name="tile_23" depth="2" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgEntrancesMapTileset" x="0" y="72" w="32" h="18" xo="33" yo="0" id="24" name="tile_24" depth="2" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgHiddenLevelTileset" x="0" y="0" w="32" h="18" xo="0" yo="19" id="25" name="tile_25" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgHiddenLevelTileset" x="32" y="0" w="32" h="18" xo="0" yo="19" id="26" name="tile_26" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgHiddenLevelTileset" x="64" y="0" w="32" h="18" xo="0" yo="19" id="27" name="tile_27" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgHiddenLevelTileset" x="96" y="0" w="32" h="18" xo="0" yo="19" id="28" name="tile_28" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgHiddenLevelTileset" x="128" y="0" w="32" h="18" xo="0" yo="19" id="29" name="tile_29" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgHiddenLevelTileset" x="0" y="18" w="32" h="18" xo="0" yo="19" id="30" name="tile_30" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgHiddenLevelTileset" x="32" y="18" w="32" h="18" xo="0" yo="0" id="31" name="tile_31" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgHiddenLevelTileset" x="64" y="18" w="32" h="18" xo="0" yo="0" id="32" name="tile_32" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgHiddenLevelTileset" x="128" y="18" w="32" h="18" xo="0" yo="19" id="33" name="tile_33" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgHiddenLevelTileset" x="32" y="36" w="32" h="18" xo="0" yo="0" id="34" name="tile_34" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgHiddenLevelTileset" x="64" y="36" w="32" h="18" xo="0" yo="0" id="35" name="tile_35" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgHiddenLevelTileset" x="96" y="36" w="32" h="18" xo="0" yo="38" id="36" name="tile_36" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgHiddenLevelTileset" x="128" y="36" w="32" h="18" xo="0" yo="19" id="37" name="tile_37" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgHiddenLevelTileset" x="32" y="54" w="32" h="18" xo="0" yo="0" id="38" name="tile_38" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgHiddenLevelTileset" x="64" y="54" w="32" h="18" xo="0" yo="0" id="39" name="tile_39" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgHiddenLevelTileset" x="128" y="54" w="32" h="18" xo="0" yo="19" id="40" name="tile_40" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgHiddenLevelTileset" x="0" y="72" w="32" h="18" xo="0" yo="38" id="41" name="tile_41" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgHiddenLevelTileset" x="32" y="72" w="32" h="18" xo="0" yo="0" id="42" name="tile_42" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgHiddenLevelTileset" x="64" y="72" w="32" h="18" xo="0" yo="0" id="43" name="tile_43" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgHiddenLevelTileset" x="96" y="72" w="32" h="18" xo="0" yo="19" id="44" name="tile_44" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgHiddenLevelTileset" x="128" y="72" w="32" h="18" xo="0" yo="19" id="45" name="tile_45" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>

@@ -33,4 +33,4 @@ draw_text(XHP, YHP, hp);
 draw_set_colour($000000);
 draw_roundrect(XMAP-6, YMAP-6, XMAP+32*5+5, YMAP+18*5+5, false);
 
-drawMap(floor(x/view_wview), floor(y/view_hview), 28, 20);
+drawMap(floor(x/view_wview), floor(y/view_hview), 28, 20, 2);
