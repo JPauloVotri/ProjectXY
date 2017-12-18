@@ -4,7 +4,10 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sndShoot</sound>
+    <sound>sound\sndStep</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="Blocks">
       <sprite>sprites\sBlock</sprite>
