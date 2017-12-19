@@ -26,8 +26,8 @@ var xPosition;
 var yPosition;
 
 //--- Inicia variáveis de posição do Player ---
-var playerRoomTileX = floor((view_xview + view_wview / 2) / view_wview) + global.mapRoomX;
-var playerRoomTileY = floor((view_yview + view_hview / 2) / view_hview) + global.mapRoomY;
+var playerRoomTileX = floor(oPlayer.x / view_wview) + global.mapRoomX;
+var playerRoomTileY = floor(oPlayer.y / view_hview) + global.mapRoomY;
 var playerTileX = -1;
 var playerTileY = -1;
 

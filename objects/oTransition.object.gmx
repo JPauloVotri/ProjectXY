@@ -166,11 +166,13 @@ if (anim){
     
     if (xTo != -1){
       oPlayer.x = xTo;
-      //oCamera.x = xTo;
+      oCamera.xTo = xTo;
+      view_xview = xTo - (view_wview / 2);
     }
     if (yTo != -1){
       oPlayer.y = yTo;
-      //oCamera.y = yTo;
+      oCamera.yTo = yTo;
+      view_yview = yTo - (view_hview / 2);
     }
   }
   
