@@ -100,31 +100,36 @@ if (global.gamePaused)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>repeat (SPEED){
-  x += dcos(direction);
-  y -= dsin(direction);
-}
-
+            <string>//--- Contador de tempo de vida ---
 lifeTime++;
 
 if (lifeTime/60 &gt;= MAXLIFETIME)
   instance_destroy();
 
-if (place_meeting(x, y, oDoor)){
-  with (instance_place(x, y, oDoor))
+//--- Aplica velocidade
+repeat (SPEED){
+  x += dcos(direction);
+  y -= dsin(direction);
+
+  //--- Colisão com porta ---
+  if (place_meeting(x, y, oDoor)){
+    with (instance_place(x, y, oDoor))
+      instance_destroy();
+    
+    instance_destroy();
+  }
+  
+  //--- Colisão com bloco ---
+  if (position_meeting(x, y, oBlock))
     instance_destroy();
   
-  instance_destroy();
-}
-
-if (place_meeting(x, y, oBlock))
-  instance_destroy();
-
-if (place_meeting(x, y, parEnemy)){
-  with (instance_place(x, y, parEnemy))
-    hp -= other.DAMAGE;
-  
-  instance_destroy();
+  //--- Colisão com Inimigo ---
+  if (place_meeting(x, y, parEnemy)){
+    with (instance_place(x, y, parEnemy))
+      hp -= other.DAMAGE;
+    
+    instance_destroy();
+  }
 }
 </string>
           </argument>
