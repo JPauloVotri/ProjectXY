@@ -41,3 +41,7 @@ if ((aimAngle < 90 || aimAngle > 270) && facing < 0)
   facing = 1;
 if ((aimAngle > 90 && aimAngle < 270) && facing > 0)
   facing = -1;
+  
+// Muda posição da câmera
+oCamera.xTo = x + 256*dcos(aimAngle);
+oCamera.yTo = y + 128*-dsin(aimAngle);

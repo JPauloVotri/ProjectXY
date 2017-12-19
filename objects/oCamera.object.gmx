@@ -66,68 +66,22 @@ else{
 
 checkCameraPositionLimits();
 
-view_xview = oPlayer.x - view_wview/2;
-view_yview = oPlayer.y - view_hview/2;
+xSpeed = 0;
+ySpeed = 0;
+
+if (abs(oPlayer.xSpeed) &gt; 0 || oPlayer.wantAim)
+  xSpeed = (xTo - (view_xview + (view_wview / 2))) / 16;
+
+ySpeed = (yTo - (view_yview + (view_hview / 2))) / 2;
+
+view_xview += xSpeed;
+view_yview += ySpeed;
 
 view_xview = clamp(view_xview, borderLeft, borderRight - view_wview);
 view_yview = clamp(view_yview, borderUp, borderDown - view_hview);
 
 x = view_xview + view_wview/2;
 y = view_yview + view_hview/2;
-
-/*if (!instance_exists(oPlayer))
-  exit;
-
-var xTo, yTo;
-
-if (inHiddenArea)
-  inHiddenArea = place_meeting(x, y, oHiddenPlace);
-else{
-  with (oPlayer){
-    other.inHiddenArea = place_meeting(x, y, oHiddenPlace);
-  }
-}
-
-xPoint = oPlayer.x + (oPlayer.facing * pointDistance);
-yPoint = oPlayer.y;
-
-move_towards_point(xPoint, yPoint, 0);
-xTo = oPlayer.x + lengthdir_x(min(96, distance_to_point(xPoint, yPoint)), direction);
-yTo = oPlayer.y + lengthdir_y(min(96, distance_to_point(xPoint, yPoint)), direction);
-
-xSpeed = (xTo-x)/2;
-ySpeed = (yTo-y)/2;
-
-xSpeed = round(xSpeed);
-ySpeed = round(ySpeed);
-
-var xTemp = x;
-var yTemp = y;
-
-repeat (abs(xSpeed)){
-  if (place_meeting(xTemp+sign(xSpeed), y, oHiddenPlace) &amp;&amp; !inHiddenArea){
-    xSpeed = 0;
-    x = xTemp;
-  }else
-    xTemp += sign(xSpeed);
-}
-
-repeat (abs(ySpeed)){
-  if (place_meeting(x, yTemp+sign(ySpeed), oHiddenPlace) &amp;&amp; !inHiddenArea){
-    ySpeed = 0;
-    y = yTemp;
-  }else
-    yTemp += sign(ySpeed);
-}
-
-x += xSpeed;
-y += ySpeed;
-
-view_xview = -(view_wview/2) + x;
-view_yview = -(view_hview/2) + y;
-
-view_xview = clamp(view_xview, 0, room_width - view_wview);
-view_yview = clamp(view_yview, 0, room_height - view_hview);*/
 </string>
           </argument>
         </arguments>
