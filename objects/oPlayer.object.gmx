@@ -434,7 +434,7 @@ draw_text(display_get_gui_width()-10, 10,
 
 
 if (isAiming)
-  laserBehaviour(256, 8, c_purple);
+  laserBehaviour(256, 1, c_purple);
 </string>
           </argument>
         </arguments>
