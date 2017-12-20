@@ -432,8 +432,9 @@ draw_text(display_get_gui_width()-10, 10,
             <kind>1</kind>
             <string>draw_self();
 
+
 if (isAiming)
-  draw_sprite_ext(sAimRay, 0, x, y, 1, 1, aimAngle, c_white, 255);
+  laserBehaviour(256, 8, c_purple);
 </string>
           </argument>
         </arguments>

@@ -34,7 +34,6 @@
     <sprite>sprites\sMapLocation</sprite>
     <sprite>sprites\sDoor</sprite>
     <sprite>sprites\sRoomChanger</sprite>
-    <sprite>sprites\sAimRay</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tile_test</background>
@@ -59,6 +58,8 @@
     <scripts name="Player">
       <scripts name="Beam">
         <script>scripts\aimBehaviour.gml</script>
+        <script>scripts\laserBehaviour.gml</script>
+        <script>scripts\drawLaser.gml</script>
         <script>scripts\instantiateShoot.gml</script>
       </scripts>
       <scripts name="Camera">
