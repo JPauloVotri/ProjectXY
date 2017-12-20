@@ -97,13 +97,13 @@ global.inRoomTransition = false;
             <string>/// Finaliza arrays e inicia transições
 x = view_xport[0];
 y = view_yport[0];
-var stripeWidth = window_get_width();
-var stripeHeight = window_get_height();
+var stripeWidth = display_get_gui_width();
+var stripeHeight = display_get_gui_height();
 
 // Finaliza arrays
 if (horizontalTransition){
-  height = window_get_height() / STRIPES;
-  width = window_get_width() + (window_get_width() / 5);
+  height = display_get_gui_height() / STRIPES;
+  width = display_get_gui_width() + (display_get_gui_width() / 5);
   timer = -width;
   maxTimer = stripeWidth;
   
@@ -114,8 +114,8 @@ if (horizontalTransition){
     stripeSpeed[i] = random_range(width / TIME, width / TIME + (TIME / 8));
   }
 }else{
-  height = window_get_width() / STRIPES;
-  width = window_get_height() + (window_get_height() / 5);
+  height = display_get_gui_width() / STRIPES;
+  width = display_get_gui_height() + (display_get_gui_height() / 5);
   timer = -width;
   maxTimer = stripeHeight;
   
@@ -166,13 +166,13 @@ if (anim){
     
     if (xTo != -1){
       oPlayer.x = xTo;
+      oCamera.x = xTo;
       oCamera.xTo = xTo;
-      view_xview = xTo - (view_wview / 2);
     }
     if (yTo != -1){
       oPlayer.y = yTo;
+      oCamera.y = yTo;
       oCamera.yTo = yTo;
-      view_yview = yTo - (view_hview / 2);
     }
   }
   

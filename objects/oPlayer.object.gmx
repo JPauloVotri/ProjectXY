@@ -379,20 +379,10 @@ else if (dir == -1)
   side = bbox_left;
 else
   side = x;
-  
-var inHiddenArea = false;
-
-if (!inHiddenArea)
-  inHiddenArea = place_meeting(x, y, oHiddenPlace);
-else
-  inHiddenArea = place_meeting(cameraInstance.x, cameraInstance.y, oHiddenPlace);
-
-var nearestTurret = instance_nearest(x, y, oTurret);
 
 draw_text(display_get_gui_width()-10, 10,
           script_get_name(state)+
           "#FPS: "+string(global.gameFps)+
-          "#floor(global.gameFps/2): "+string(floor(global.gameFps/2))+
           "#dir: "+string(dir)+
           "#xSpeedSign: "+string(xSpeedSign)+
           "#ySpeedSign: "+string(ySpeedSign)+
@@ -405,8 +395,7 @@ draw_text(display_get_gui_width()-10, 10,
           "#global.inRoomTransition: "+string(global.inRoomTransition)+
           "#aimAngle: "+string(aimAngle)+
           "#wantAim: "+string(wantAim)+
-          "#isAiming: "+string(isAiming)+
-          "#delta_time: "+string(delta_time));
+          "#isAiming: "+string(isAiming));
 
 </string>
           </argument>

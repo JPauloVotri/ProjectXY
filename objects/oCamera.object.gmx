@@ -28,8 +28,6 @@
             <string>/// Initialize Camera Variables
 inHiddenPlace = false;
 pointDistance = 512;
-xPoint = 0;
-yPoint = 0;
 
 xTo = 0;
 yTo = 0;
@@ -70,18 +68,18 @@ xSpeed = 0;
 ySpeed = 0;
 
 if (abs(oPlayer.xSpeed) &gt; 0 || oPlayer.wantAim)
-  xSpeed = (xTo - (view_xview + (view_wview / 2))) / 16;
+  xSpeed = (xTo - x) / 16;
 
-ySpeed = (yTo - (view_yview + (view_hview / 2))) / 2;
+ySpeed = (yTo - y) / 2;
 
-view_xview += xSpeed;
-view_yview += ySpeed;
+x += xSpeed;
+y += ySpeed;
 
-view_xview = clamp(view_xview, borderLeft, borderRight - view_wview);
-view_yview = clamp(view_yview, borderUp, borderDown - view_hview);
+x = clamp(x, borderLeft + view_wview/2, borderRight - view_wview/2);
+y = clamp(y, borderUp + view_hview/2, borderDown - view_hview/2);
 
-x = view_xview + view_wview/2;
-y = view_yview + view_hview/2;
+view_xview = x - view_wview/2;
+view_yview = y - view_hview/2;
 </string>
           </argument>
         </arguments>
