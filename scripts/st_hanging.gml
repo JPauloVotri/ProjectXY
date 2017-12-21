@@ -8,7 +8,7 @@ if !(hangingUp){
     hangingUp = true;
   }
 }else{
-  if (y > tempY - 160)
+  if (y > tempY - 128)
     ySpeed = -getHangingUpSpeed();
   else{
     ySpeed = 0;
