@@ -28,8 +28,8 @@ global.mapRoomY = 1;</code>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
     <page>0</page>
-    <xoffset>-320</xoffset>
-    <yoffset>-190</yoffset>
+    <xoffset>591</xoffset>
+    <yoffset>-208</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="0" name="bRoomTest" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -59,7 +59,7 @@ global.mapRoomY = 1;</code>
     <instance objName="oBlock" x="832" y="0" name="inst_81BE00D3" locked="0" code="" scaleX="6" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="oHalfBlock" x="768" y="64" name="inst_8800672A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="1216" y="0" name="inst_EDA0B513" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oHalfBlock" x="1216" y="64" name="inst_595271B9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oHalfBlock" x="1216" y="64" name="inst_595271B9" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oHalfBlock" x="1536" y="448" name="inst_353A4CD9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oHalfBlock" x="1152" y="512" name="inst_88916D90" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="1024" y="576" name="inst_47E0664F" locked="0" code="" scaleX="1" scaleY="20" colour="4294967295" rotation="0"/>
@@ -68,19 +68,19 @@ global.mapRoomY = 1;</code>
     <instance objName="oBlock" x="128" y="2176" name="inst_6777AEFA" locked="0" code="" scaleX="14" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="832" y="2112" name="inst_8C10B4FB" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="832" y="1856" name="inst_5819FAE8" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oSmallSlope" x="768" y="2112" name="inst_C80B1D3C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oSmallSlope" x="128" y="2112" name="inst_10A6EC58" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oSlope" x="768" y="2112" name="inst_C80B1D3C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oSlope" x="128" y="2112" name="inst_10A6EC58" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oHalfBlock" x="256" y="1856" name="inst_DACD53B9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="128" y="1856" name="inst_6EB74219" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oHalfBlock" x="1024" y="1856" name="inst_B825526E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oSmallSlope" x="1024" y="2112" name="inst_461C40B9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oSlope" x="1024" y="2112" name="inst_461C40B9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="1024" y="2176" name="inst_50766993" locked="0" code="" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="1088" y="2240" name="inst_6123418B" locked="0" code="" scaleX="22" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="1984" y="2112" name="inst_E54CFD6C" locked="0" code="" scaleX="5" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="1920" y="2176" name="inst_64938D59" locked="0" code="" scaleX="7" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oSmallSlope" x="1856" y="2176" name="inst_87DCB314" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oSmallSlope" x="1920" y="2112" name="inst_B3E9D1BF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oSmallSlope" x="1088" y="2176" name="inst_9F972D3A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oSlope" x="1856" y="2176" name="inst_87DCB314" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oSlope" x="1920" y="2112" name="inst_B3E9D1BF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oSlope" x="1088" y="2176" name="inst_9F972D3A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oWater" x="1024" y="2112" name="inst_562D8675" locked="0" code="" scaleX="15" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="3008" y="960" name="inst_820D3E99" locked="0" code="" scaleX="1" scaleY="16" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="2368" y="1792" name="inst_D2DA6C4A" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
@@ -90,8 +90,8 @@ global.mapRoomY = 1;</code>
     <instance objName="oBlock" x="2240" y="1024" name="inst_C88598F5" locked="0" code="" scaleX="2.03174614906311" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="1856" y="768" name="inst_33F1DC60" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="1856" y="704" name="inst_114E994B" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oSmallSlope" x="1984" y="704" name="inst_496A30C3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oSmallSlope" x="1920" y="640" name="inst_3AF46ACA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oSlope" x="1984" y="704" name="inst_496A30C3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oSlope" x="1920" y="640" name="inst_3AF46ACA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="1856" y="640" name="inst_EF088AD5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oHalfBlock" x="1088" y="576" name="inst_026D0A19" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="3008" y="0" name="inst_D8E81B12" locked="0" code="" scaleX="1" scaleY="12" colour="4294967295" rotation="0"/>
@@ -103,7 +103,7 @@ global.mapRoomY = 1;</code>
     <instance objName="oBlock" x="4032" y="640" name="inst_1707B3A2" locked="0" code="" scaleX="1" scaleY="5" colour="4294967295" rotation="0"/>
     <instance objName="oHalfBlock" x="3072" y="640" name="inst_19FD501F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oHalfBlock" x="3968" y="640" name="inst_873FBE4D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oSmallSlope" x="3968" y="896" name="inst_0665D684" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oSlope" x="3968" y="896" name="inst_0665D684" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oHalfBlock" x="2368" y="1024" name="inst_D06A7EAA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="2496" y="1344" name="inst_6704ADCB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="2560" y="1344" name="inst_8A55BC3F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -111,10 +111,10 @@ global.mapRoomY = 1;</code>
     <instance objName="oTurret" x="136" y="1952" name="inst_A0766E0E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oTurret" x="1472" y="520" name="inst_C2A00F19" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oTurret" x="2232" y="1056" name="inst_8A61A658" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oSmallSlope" x="2304" y="2112" name="inst_A74C3B80" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oSmallSlope" x="2368" y="2176" name="inst_15B24371" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oSlope" x="2304" y="2112" name="inst_A74C3B80" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oSlope" x="2368" y="2176" name="inst_15B24371" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="3008" y="2176" name="inst_C95D08B1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oSmallSlope" x="2944" y="2176" name="inst_3BCBAA60" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oSlope" x="2944" y="2176" name="inst_3BCBAA60" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oDoor" x="3008" y="2080" name="inst_45524DC3" locked="0" code="doorId = 1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oRoomChanger" x="3072" y="2080" name="inst_F166BD9A" locked="0" code="nextRoom = room2;&#xA;nextDoorId = 0;&#xA;horizontalTransition = true;" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
     <instance objName="oBlock" x="0" y="576" name="inst_5C4DB0AF" locked="0" code="" scaleX="16" scaleY="18" colour="4294967295" rotation="0"/>
@@ -126,12 +126,9 @@ global.mapRoomY = 1;</code>
     <instance objName="oBlock" x="608" y="0" name="inst_30B927DC" locked="0" code="" scaleX="3.5" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oRoomChanger" x="512" y="0" name="inst_962AB26E" locked="0" code="nextRoom = room4;&#xA;nextDoorId = 0;&#xA;horizontalTransition = false;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
     <instance objName="oHalfBlock" x="64" y="64" name="inst_B3B02B88" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oLargeSlope" x="640" y="448" name="inst_B6D8CF78" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="960" y="448" name="inst_915DDA21" locked="0" code="" scaleX="5" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="832" y="448" name="inst_0B52D6DA" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oLargeSlope" x="256" y="448" name="inst_D99E0D0D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oMediumSlope" x="128" y="384" name="inst_DCB8D6FE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oSmallSlope" x="64" y="320" name="inst_FC169D1D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oSlope" x="64" y="320" name="inst_FC169D1D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="64" y="384" name="inst_9A9ACE36" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="64" y="448" name="inst_E0C00C29" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oDoor" x="512" y="64" name="inst_7487BE3A" locked="0" code="doorId = 0;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
@@ -143,6 +140,9 @@ global.mapRoomY = 1;</code>
     <instance objName="oHiddenPlace" x="0" y="1728" name="inst_3D234717" locked="0" code="" scaleX="16" scaleY="9.14285755157471" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="1280" y="0" name="inst_989FA28C" locked="0" code="" scaleX="27" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oHalfBlock" x="2944" y="64" name="inst_EF994B97" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oSlope" x="128" y="384" name="inst_86024D65" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oSlope" x="256" y="448" name="inst_06C83B6A" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oSlope" x="640" y="448" name="inst_3C6C74E3" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
