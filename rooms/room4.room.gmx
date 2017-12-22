@@ -28,8 +28,8 @@ global.mapRoomY = 0;</code>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
     <page>0</page>
-    <xoffset>100</xoffset>
-    <yoffset>-197</yoffset>
+    <xoffset>-178</xoffset>
+    <yoffset>-161</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="0" name="bRoomTest" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>

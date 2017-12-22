@@ -1,6 +1,6 @@
 /// getSpeed();
 
-if (inWater)
+if (inWater && powerUps[? "fluidFriction"])
   return SPEED / WATERDIVIDER;
   
 return SPEED;

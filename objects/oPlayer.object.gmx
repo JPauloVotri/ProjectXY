@@ -73,6 +73,32 @@ instance_create(x, y, oCamera);
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Cria mapa dos powerUps
+powerUps = ds_map_create();
+
+powerUps[? "fluidFriction"] = true;
+powerUps[? "highJump"] = false;
+powerUps[? "doubleJump"] = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="3" enumb="0">
       <action>
@@ -258,7 +284,7 @@ cleanMove();
             <kind>1</kind>
             <string>/// Cheats
 if (keyboard_check_pressed(key.cheat)){
-  cheat = get_string("Enter a command: (xspd | jump | hangspd | fric | waterDivisor | grav | fall | (x/y)CamDist | camSpeed | hp", "");
+  cheat = get_string("Enter a command: (xspd | jump | hangspd | fric | waterDivisor | grav | fall | fluidFriction | highJump | doubleJump | hp", "");
 
   switch(cheat){
     case "xspd":
@@ -282,19 +308,31 @@ if (keyboard_check_pressed(key.cheat)){
     case "fall":
       MAXFALLSPEED = get_integer("Enter the new max fall speed:", MAXFALLSPEED);
     break;
-    case "xCamDist":
-      cameraInstance.xDistance = get_integer("Enter the new camera x distance:", cameraInstance.xDistance);
+    case "fluidFriction":
+      powerUps[? "fluidFriction"] = !powerUps[? "fluidFriction"];
     break;
-    case "yCamDist":
-      cameraInstance.yDistance = get_integer("Enter the new camera y distance:", cameraInstance.yDistance);
+    case "highJump":
+      powerUps[? "highJump"] = !powerUps[? "highJump"];
     break;
-    case "camSpeed":
-      cameraInstance.SPEED = get_integer("Enter the new camera speed:", SPEED);
+    case "doubleJump":
+      powerUps[? "doubleJump"] = !powerUps[? "doubleJump"];
     break;
     case "hp":
       hp = get_integer("Enter the new hp value:", hp);
   }
-} 
+}
+
+//--- Atrito nos fluidos ---
+if (keyboard_check_pressed(key.fluidFriction))
+  powerUps[? "fluidFriction"] = !powerUps[? "fluidFriction"];
+
+//--- Pulo alto ---
+if (keyboard_check_pressed(key.highJump))
+  powerUps[? "highJump"] = !powerUps[? "highJump"];
+
+//--- Pulo alto ---
+if (keyboard_check_pressed(key.doubleJump))
+  powerUps[? "doubleJump"] = !powerUps[? "doubleJump"];
 </string>
           </argument>
         </arguments>
@@ -384,18 +422,17 @@ draw_text(display_get_gui_width()-10, 10,
           script_get_name(state)+
           "#FPS: "+string(global.gameFps)+
           "#dir: "+string(dir)+
-          "#xSpeedSign: "+string(xSpeedSign)+
-          "#ySpeedSign: "+string(ySpeedSign)+
+          "#xSpeed: "+string(xSpeed)+
+          "#ySpeed: "+string(ySpeed)+
           "#facing: "+string(facing)+
           "#shootCooldown: "+string(shootCooldown)+
           "#extraLifes: "+string(extraLifes)+
           "#extraLifesTotal: "+string(extraLifesTotal)+
           "#totalHP: "+string(hp + extraLifes*100)+
-          "#global.gamePaused: "+string(global.gamePaused)+
-          "#global.inRoomTransition: "+string(global.inRoomTransition)+
           "#aimAngle: "+string(aimAngle)+
-          "#wantAim: "+string(wantAim)+
-          "#isAiming: "+string(isAiming));
+          "##fluidFriction: "+string(powerUps[? "fluidFriction"])+
+          "#highJump: "+string(powerUps[? "highJump"])+
+          "#doubleJump: "+string(powerUps[? "doubleJump"]));
 
 </string>
           </argument>

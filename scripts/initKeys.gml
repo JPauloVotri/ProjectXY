@@ -13,5 +13,8 @@ enum key{
   aimDown = vk_down,
   
   cheat = vk_insert,
+  fluidFriction = ord("1"),
+  highJump = ord("2"),
+  doubleJump = ord("3"),
   damage = vk_delete
 }
