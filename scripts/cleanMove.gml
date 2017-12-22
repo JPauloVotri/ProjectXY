@@ -4,8 +4,10 @@
 */
 
 //--- Adiciona gravidade ---
-if (ySpeed < MAXFALLSPEED)
+if (ySpeed < getMaxFallSpeed())
   ySpeed += grav;
+else
+  ySpeed = getMaxFallSpeed();
 
 //--- Instanciação de variáveis ---
 var xSpeedAbs = abs(xSpeed);

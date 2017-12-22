@@ -25,12 +25,12 @@ if (keyboard_check_pressed(key.jump) && ySpeed > 0 && ySpeed < MAXFALLSPEED && j
 if (keyboard_check(key.right)) {
   if (xSpeedSign != 1) || (xSpeed == 0) {
     xSpeedSign = 0;
-    xSpeed = AIRSPEED;
+    xSpeed = getAirSpeed();
   }
 }else if (keyboard_check(key.left)) {
   if ((xSpeedSign != -1) || (xSpeed == 0)) {
     xSpeedSign = 0;
-    xSpeed = -AIRSPEED;
+    xSpeed = -getAirSpeed();
   }
 }
 

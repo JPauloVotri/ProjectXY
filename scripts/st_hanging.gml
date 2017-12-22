@@ -15,7 +15,7 @@ if !(hangingUp){
     xSpeed = getHangingUpSpeed() * hangingDir;
   }
   
-  if ((xSpeed < 0 && x == tempX - 64) || (xSpeed > 0 && x == tempX + 64)){
+  if ((xSpeed < 0 && x <= tempX - 32) || (xSpeed > 0 && x >= tempX + 32)){
     xSpeed = 0;
     jumps = 0;
     hangingUp = false;

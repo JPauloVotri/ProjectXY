@@ -67,8 +67,10 @@ checkCameraPositionLimits();
 xSpeed = 0;
 ySpeed = 0;
 
-if (abs(oPlayer.xSpeed) &gt; 0 || oPlayer.wantAim)
-  xSpeed = (xTo - x) / 16;
+with (oPlayer){
+  if (abs(xSpeed) &gt; 0 || wantAim)
+    other.xSpeed = (other.xTo - other.x) / ((SPEED / getSpeed()) * 16);
+}
 
 ySpeed = (yTo - y) / 2;
 

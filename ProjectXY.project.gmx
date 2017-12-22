@@ -67,10 +67,12 @@
         <script>scripts\cameraPositioning.gml</script>
       </scripts>
       <scripts name="Getters">
+        <script>scripts\getAirSpeed.gml</script>
         <script>scripts\getSpeed.gml</script>
         <script>scripts\getJumpForce.gml</script>
         <script>scripts\getGravityForce.gml</script>
         <script>scripts\getHangingUpSpeed.gml</script>
+        <script>scripts\getMaxFallSpeed.gml</script>
       </scripts>
       <scripts name="Gui">
         <scripts name="Pause Menu">
