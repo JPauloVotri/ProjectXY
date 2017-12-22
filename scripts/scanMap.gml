@@ -15,10 +15,10 @@ for (var i = 0; i <= roomTileWidth; i++){
   for (var j = 0; j <= roomTileHeight; j++){
     //--- Camada de fundo ---
     if (tile_layer_find(3, i*32, j*18) != -1){
-      ds_map_add(map, string(i)+"-"+string(j)+"Visited", false);
+      map[? string(i)+"-"+string(j)+"Visited"] = false;
       
-      ds_map_add(mapNormal, string(i)+"-"+string(j)+"x", getTileLeft(tile_layer_find(3, i*32, j*18)));
-      ds_map_add(mapNormal, string(i)+"-"+string(j)+"y", getTileTop(tile_layer_find(3, i*32, j*18)));
+      mapNormal[? string(i)+"-"+string(j)+"x"] = getTileLeft(tile_layer_find(3, i*32, j*18));
+      mapNormal[? string(i)+"-"+string(j)+"y"] = getTileTop(tile_layer_find(3, i*32, j*18));
       
       show_debug_message(string(i)+"-"+string(j)+"x"+"(Normal): "+string(getTileLeft(tile_layer_find(3, i*32, j*18))/33));
       show_debug_message(string(i)+"-"+string(j)+"y"+"(Normal): "+string(getTileTop(tile_layer_find(3, i*32, j*18))/19));
@@ -26,8 +26,8 @@ for (var i = 0; i <= roomTileWidth; i++){
     
     //--- Camada de entradas ---
     if (tile_layer_find(2, i*32, j*18) != -1){
-      ds_map_add(mapEntrance, string(i)+"-"+string(j)+"x", getTileLeft(tile_layer_find(2, i*32, j*18)));
-      ds_map_add(mapEntrance, string(i)+"-"+string(j)+"y", getTileTop(tile_layer_find(2, i*32, j*18)));
+      mapEntrance[? string(i)+"-"+string(j)+"x"] = getTileLeft(tile_layer_find(2, i*32, j*18));
+      mapEntrance[? string(i)+"-"+string(j)+"y"] = getTileTop(tile_layer_find(2, i*32, j*18));
       
       show_debug_message(string(i)+"-"+string(j)+"x"+"(Entrance): "+string(getTileLeft(tile_layer_find(2, i*32, j*18))/33));
       show_debug_message(string(i)+"-"+string(j)+"y"+"(Entrance): "+string(getTileTop(tile_layer_find(2, i*32, j*18))/19));
@@ -35,7 +35,7 @@ for (var i = 0; i <= roomTileWidth; i++){
     
     //--- Nível de segurança ---
     if (tile_layer_find(1, i*32, j*18) != -1){
-      ds_map_add(mapHiddenLevel, string(i)+"-"+string(j)+"HiddenLevel", getTileTop(tile_layer_find(1, i*32, j*18))/19);
+      mapHiddenLevel[? string(i)+"-"+string(j)+"HiddenLevel"] = getTileTop(tile_layer_find(1, i*32, j*18))/19;
       
       show_debug_message(string(i)+"-"+string(j)+"HiddenLevel: "+string(getTileTop(tile_layer_find(1, i*32, j*18))/19));
     }
@@ -44,9 +44,9 @@ for (var i = 0; i <= roomTileWidth; i++){
   }
 }
 
-ds_map_add_map(map, "mapEntrance", mapEntrance);
-ds_map_add_map(map, "mapNormal", mapNormal);
-ds_map_add_map(map, "mapHiddenLevel", mapHiddenLevel);
+map[? "mapEntrance"] = mapEntrance;
+map[? "mapNormal"] = mapNormal;
+map[? "mapHiddenLevel"] = mapHiddenLevel;
 
 return map;
 

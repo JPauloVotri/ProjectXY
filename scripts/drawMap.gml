@@ -9,9 +9,9 @@ var radius = argument4;
 var diameter = radius * 2;
 
 //--- Carrega os mapas ---
-var mapEntrance = ds_map_find_value(global.map, "mapEntrance");
-var mapNormal = ds_map_find_value(global.map, "mapNormal");
-var mapHiddenLevel = ds_map_find_value(global.map, "mapHiddenLevel");
+var mapEntrance = global.map[? "mapEntrance"];
+var mapNormal = global.map[? "mapNormal"];
+var mapHiddenLevel = global.map[? "mapHiddenLevel"];
 
 //--- Inicia variáveis de posição da tile no Tileset ---
 var tileLeft;
@@ -32,11 +32,11 @@ var playerTileX = -1;
 var playerTileY = -1;
 
 //--- Inicia variável que informa se a tile já foi visitada ou não ---
-var isVisited = ds_map_find_value(global.map, string(playerRoomTileX)+"-"+string(playerRoomTileY)+"Visited");
+var isVisited = global.map[? string(playerRoomTileX)+"-"+string(playerRoomTileY)+"Visited"];
 
 //--- Altera informação de visita caso a tile tenha sido visitada ---
 if (!isVisited)
-  ds_map_replace(global.map, string(playerRoomTileX)+"-"+string(playerRoomTileY)+"Visited", true);
+  global.map[? string(playerRoomTileX)+"-"+string(playerRoomTileY)+"Visited"] = true;
 
 //--- Gerenciamento de variáveis de tempo da sprite de localização no mapa ---
 if (global.mapPositionTick >= global.gameFps*0.5){
@@ -62,12 +62,12 @@ for (var i = 0; i <= diameter; i++){
       playerTileY = tileYDraw;
     
     //--- Carrega informações de visita e do nível de ocultação --- 
-    isVisited = ds_map_find_value(global.map, string(xPosition)+"-"+string(yPosition)+"Visited");
-    hiddenLevel = ds_map_find_value(mapHiddenLevel, string(xPosition)+"-"+string(yPosition)+"HiddenLevel");
+    isVisited = global.map[? string(xPosition)+"-"+string(yPosition)+"Visited"];
+    hiddenLevel = mapHiddenLevel[? string(xPosition)+"-"+string(yPosition)+"HiddenLevel"];
     
     //--- Carrega posição da tile de fundo no Tileset e desenha ---
-    tileLeft = ds_map_find_value(mapNormal, string(xPosition)+"-"+string(yPosition)+"x");
-    tileTop = ds_map_find_value(mapNormal, string(xPosition)+"-"+string(yPosition)+"y");
+    tileLeft = mapNormal[? string(xPosition)+"-"+string(yPosition)+"x"];
+    tileTop = mapNormal[? string(xPosition)+"-"+string(yPosition)+"y"];
     
     if ((!is_undefined(tileLeft) || !is_undefined(tileTop)) && (hiddenLevel == 0 || isVisited || (global.mapRevealed && hiddenLevel <= 1)))
       draw_background_part(bgNormalMapTileset, tileLeft, tileTop + (133 * isVisited), 32, 18, tileXDraw, tileYDraw);
@@ -75,8 +75,8 @@ for (var i = 0; i <= diameter; i++){
       draw_background_part(bgNormalMapTileset, 0, 0, 32, 18, tileXDraw, tileYDraw);
     
     //--- Carrega posição da tile de entrada no Tileset e desenha ---
-    tileLeft = ds_map_find_value(mapEntrance, string(xPosition)+"-"+string(yPosition)+"x");
-    tileTop = ds_map_find_value(mapEntrance, string(xPosition)+"-"+string(yPosition)+"y");
+    tileLeft = mapEntrance[? string(xPosition)+"-"+string(yPosition)+"x"];
+    tileTop = mapEntrance[? string(xPosition)+"-"+string(yPosition)+"y"];
     
     if ((!is_undefined(tileLeft) || !is_undefined(tileTop)) && isVisited)
       draw_background_part(bgEntrancesMapTileset, tileLeft, tileTop, 32, 18, tileXDraw, tileYDraw);
