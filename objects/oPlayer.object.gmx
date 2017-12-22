@@ -28,8 +28,8 @@
             <string>SPEED = 6;
 AIRSPEED = 3;
 JUMPFORCE = 14;
-GRAVITYFORCE = 0.5;
-HANGINGUPSPEED = 4;
+GRAVITYFORCE = 0.35;
+HANGINGUPSPEED = 8;
 FREEMOVEINAIR = false;
 FRICTIONFORCE = 0.97;
 WATERDIVIDER = 2;
@@ -55,6 +55,7 @@ ySpeed = 0;
 xSpeed = 0;
 xSpeedSign = 0;
 grav = 0;
+jumps = 0;
 
 isAiming = false;
 isGrounded = false;

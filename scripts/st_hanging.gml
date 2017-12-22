@@ -17,6 +17,7 @@ if !(hangingUp){
   
   if ((xSpeed < 0 && x == tempX - 64) || (xSpeed > 0 && x == tempX + 64)){
     xSpeed = 0;
+    jumps = 0;
     hangingUp = false;
     state = st_idle;
   }

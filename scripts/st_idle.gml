@@ -16,6 +16,7 @@ if (wantMove){
 }else if (keyboard_check_pressed(key.jump) && place_meeting(x, y+1, oBlock)){
   ySpeed = -getJumpForce();
   xSpeedSign = 0;
+  jumps++;
   state = st_air;
   exit;
 }
